@@ -218,6 +218,7 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .pf{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--sub);line-height:1.4}
 .pfy{color:var(--green);font-weight:800;font-size:14px;flex-shrink:0}
 .pfn{color:var(--dim);font-size:14px;flex-shrink:0}
+.pf:has(.pfn){opacity:0.38}
 .plan-btn{display:block;width:100%;padding:13px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;text-align:center;border:none;transition:all 0.2s;letter-spacing:-0.1px}
 .plan-btn-dark{background:var(--navy);color:#fff}
 .plan-btn-dark:hover{background:#1a2540}
@@ -245,17 +246,38 @@ footer{background:#070D1A;padding:64px 6% 36px}
 /* ══════════════════════════════
    RESPONSIVE
 ══════════════════════════════ */
+.nav-hamburger{display:none;background:none;border:1px solid var(--border);border-radius:8px;cursor:pointer;padding:7px 9px;color:var(--navy);align-items:center;justify-content:center;transition:border-color 0.15s}
+.nav-hamburger:hover{border-color:var(--navy)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:10px 6% 16px;z-index:199;flex-direction:column;gap:2px;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.mobile-menu.open{display:flex}
+.mobile-link{padding:12px 16px;border-radius:9px;font-size:15px;font-weight:500;color:var(--sub);background:none;border:none;cursor:pointer;font-family:inherit;text-align:left;text-decoration:none;display:block;transition:background 0.15s,color 0.15s;width:100%}
+.mobile-link:hover{background:var(--surface);color:var(--navy)}
+.mobile-menu-sep{height:1px;background:var(--border);margin:8px 0}
+.pour-qui-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;max-width:1140px}
 @media(max-width:900px){
   .kpis{grid-template-columns:1fr 1fr}
   .dash-body,.prob-grid,.testi-grid,.stats-grid,.plans-grid,.footer-grid{grid-template-columns:1fr}
   .prod-pane.active{grid-template-columns:1fr}
   .pp-right{display:none}
   nav .nav-links{display:none}
+  .nav-right .btn{display:none}
+  .nav-hamburger{display:flex}
   .plans-grid{grid-template-columns:1fr 1fr}
+  .pour-qui-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero{padding:60px 6% 40px}
+  .section{padding:60px 6%}
+  .stats-section{padding:60px 6%}
+  .cta-final{padding:60px 6%}
+  .prod-hero{padding:48px 6% 0}
+  .prix-hero{padding:48px 6% 40px}
 }
 @media(max-width:540px){
   .kpis{grid-template-columns:1fr}
   .plans-grid{grid-template-columns:1fr}
+  .hero h1{letter-spacing:-1.5px}
+  .stats-grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -285,9 +307,21 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <button class="lang-btn" id="lang-btn" onclick="toggleLang()">EN</button>
       <a href="https://app.unitly.ca" class="btn btn-ghost" data-fr="Connexion" data-en="Login">Connexion</a>
       <a href="https://app.unitly.ca/register" class="btn btn-dark" data-fr="Commencer" data-en="Get started">Commencer</a>
+      <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1h18M0 7h18M0 13h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-link" onclick="goPage('accueil');closeMobileMenu()" data-fr="Accueil" data-en="Home">Accueil</button>
+  <button class="mobile-link" onclick="goPage('produit');closeMobileMenu()" data-fr="Produit" data-en="Product">Produit</button>
+  <button class="mobile-link" onclick="goPage('tarifs');closeMobileMenu()" data-fr="Tarifs" data-en="Pricing">Tarifs</button>
+  <button class="mobile-link" onclick="goPage('contact');closeMobileMenu()" data-fr="Contact" data-en="Contact">Contact</button>
+  <div class="mobile-menu-sep"></div>
+  <a href="https://app.unitly.ca" class="mobile-link" data-fr="Connexion" data-en="Login">Connexion</a>
+  <a href="https://app.unitly.ca/register" class="mobile-link" style="color:var(--blue);font-weight:700" data-fr="Commencer gratuitement →" data-en="Get started free →">Commencer gratuitement →</a>
+</div>
 
 <!-- ══════════════════════════════
      PAGE ACCUEIL
@@ -394,7 +428,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="section-tag" data-fr="Pour qui ?" data-en="Who is it for?">Pour qui ?</div>
       <h2 data-fr="Conçu pour tous les propriétaires canadiens" data-en="Built for every Canadian landlord">Conçu pour tous les propriétaires canadiens</h2>
       <p class="lead" style="margin:14px auto 52px;text-align:center" data-fr="Que vous ayez 1 ou 100 portes, Unitly s'adapte à votre réalité." data-en="Whether you have 1 or 100 units, Unitly adapts to your reality.">Que vous ayez 1 ou 100 portes, Unitly s'adapte à votre réalité.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left">
+      <div class="pour-qui-grid">
 
         <div style="border:1px solid var(--border);border-radius:var(--rl);padding:32px;transition:all 0.25s;cursor:default" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,0.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
           <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-bottom:14px" data-fr="Petit propriétaire" data-en="Small landlord">Petit propriétaire</div>
@@ -924,7 +958,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="section-tag" data-fr="Contact" data-en="Contact">Contact</div>
       <div class="prod-h1" data-fr="On est là pour vous" data-en="We're here for you">On est là pour vous</div>
       <div class="prod-sub" data-fr="Support disponible en français et en anglais. Réponse en moins de 24h." data-en="Support available in French and English. Response within 24 hours.">Support disponible en français et en anglais. Réponse en moins de 24h.</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;max-width:1140px">
+      <div class="contact-grid">
         <!-- Formulaire -->
         <div>
           <div style="display:flex;flex-direction:column;gap:14px">
@@ -1129,6 +1163,10 @@ function toggleFaq(el) {
 window.addEventListener('scroll', () => {
   document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 20);
 }, {passive: true});
+
+// ── MOBILE MENU ──
+function toggleMobileMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
+function closeMobileMenu(){document.getElementById('mobile-menu').classList.remove('open')}
 
 // ── PAGE INIT ──
 document.getElementById('page-accueil').style.opacity = '1';
