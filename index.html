@@ -153,11 +153,10 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .cta-final{background:var(--navy);text-align:center;padding:96px 6%;position:relative;overflow:hidden}
 .cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(59,91,219,0.25) 0%,transparent 70%);pointer-events:none}
 .cta-final h2{color:#fff;max-width:680px;margin:0 auto 18px;position:relative}
-.cta-final p{color:rgba(255,255,255,0.5);font-size:18px;max-width:480px;margin:0 auto 36px;position:relative;letter-spacing:-0.2px}
-.cta-final p{color:rgba(255,255,255,0.5);font-size:18px;max-width:480px;margin:0 auto 44px;position:relative;letter-spacing:-0.2px}
+.cta-final p{color:rgba(255,255,255,0.5);font-size:18px;max-width:480px;margin:0 auto 20px;position:relative;letter-spacing:-0.2px}
 .btn-white{background:#fff;color:var(--navy);font-size:16px;padding:16px 36px;border-radius:var(--rl);font-weight:800;letter-spacing:-0.4px;border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;position:relative}
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,0.2)}
-.cta-btn-wrap{display:flex;justify-content:center;margin:36px 0 20px}
+.cta-btn-wrap{display:flex;justify-content:center;margin:0 0 20px}
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,0.2)}
 .cta-note{color:rgba(255,255,255,0.3);font-size:13px;margin-top:18px;position:relative}
 .cta-note span{margin:0 10px;opacity:0.4}
@@ -206,7 +205,7 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .tog-btn.active{background:var(--navy);color:#fff;box-shadow:0 2px 8px rgba(15,23,41,0.2)}
 .plans-wrap{padding:0 6% 96px;max-width:1140px;margin:0 auto}
 .plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;padding-top:16px}
-.plan-card{border:1px solid var(--border);border-radius:var(--rl);padding:28px;background:#fff;position:relative;transition:all 0.25s cubic-bezier(0.4,0,0.2,1)}
+.plan-card{border:1px solid var(--border);border-radius:var(--rl);padding:28px;background:#fff;position:relative;transition:all 0.25s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column}
 .plan-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,0.08)}
 .plan-card.pop{border:1.5px solid var(--blue);box-shadow:0 8px 32px rgba(59,91,219,0.12)}
 .plan-card.pop:hover{box-shadow:0 20px 48px rgba(59,91,219,0.18)}
@@ -215,7 +214,7 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .plan-price{font-size:38px;font-weight:800;letter-spacing:-1.5px;color:var(--navy);line-height:1;margin-bottom:4px}
 .plan-price sub{font-size:15px;font-weight:500;color:var(--sub);letter-spacing:0}
 .plan-limit{font-size:12px;color:var(--sub);margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--border);line-height:1.5}
-.plan-feats{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.plan-feats{display:flex;flex-direction:column;gap:9px;margin-bottom:24px;flex:1}
 .pf{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--sub);line-height:1.4}
 .pfy{color:var(--green);font-weight:800;font-size:14px;flex-shrink:0}
 .pfn{color:var(--dim);font-size:14px;flex-shrink:0}
