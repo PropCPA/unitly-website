@@ -1085,7 +1085,7 @@ function toggleLang() {
   document.querySelectorAll('[data-fr]').forEach(el => {
     const txt = el.getAttribute('data-' + lang);
     if (!txt) return;
-    if (el.tagName === 'H1' || el.tagName === 'H2' || (el.tagName === 'DIV' && el.classList.contains('prod-h1'))) {
+    if (el.tagName === 'H1' || el.tagName === 'H2' || (el.tagName === 'DIV' && el.classList.contains('prod-h1')) || txt.includes('<')) {
       el.innerHTML = txt;
     } else {
       el.textContent = txt;
