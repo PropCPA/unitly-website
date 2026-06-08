@@ -126,6 +126,14 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
 h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing:-1.2px;color:var(--navy)}
 .lead{font-size:17px;color:var(--sub);line-height:1.75;letter-spacing:-0.2px;margin-top:14px;max-width:520px}
 
+/* Comment ça marche */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;max-width:860px;margin-left:auto;margin-right:auto;position:relative}
+.how-grid::before{content:'';position:absolute;top:25px;left:calc(33.33% / 2 + 26px);right:calc(33.33% / 2 + 26px);height:1px;background:var(--border);z-index:0}
+.how-step{text-align:center;padding:0 28px}
+.how-num{width:52px;height:52px;border-radius:14px;background:var(--blue);color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;letter-spacing:-0.5px;position:relative;z-index:1;box-shadow:0 4px 16px rgba(59,91,219,0.25)}
+.how-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px;letter-spacing:-0.3px}
+.how-desc{font-size:13px;color:var(--sub);line-height:1.75}
+
 /* Problème → Solution */
 .prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px}
 .prob-card{padding:28px;border-radius:var(--rl);border:1px solid var(--border);display:flex;gap:18px}
@@ -278,7 +286,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;max-width:1140px}
 @media(max-width:900px){
   .kpis{grid-template-columns:1fr 1fr}
-  .dash-body,.prob-grid,.testi-grid,.stats-grid,.plans-grid,.footer-grid{grid-template-columns:1fr}
+  .dash-body,.prob-grid,.testi-grid,.stats-grid,.plans-grid,.footer-grid,.how-grid{grid-template-columns:1fr}
   .prod-pane.active{grid-template-columns:1fr}
   .pp-right{display:none}
   nav .nav-links{display:none}
@@ -287,6 +295,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
   .plans-grid{grid-template-columns:1fr 1fr}
   .pour-qui-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
+  .how-grid::before{display:none}
+  .how-step{padding:0 16px 32px}
   .hero{padding:60px 6% 40px}
   .section{padding:60px 6%}
   .stats-section{padding:60px 6%}
@@ -425,6 +435,32 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="trust-item" data-fr="Support bilingue FR / EN" data-en="Bilingual FR / EN support">Support bilingue FR / EN</div>
     </div>
   </div>
+
+  <!-- Comment ça marche -->
+  <section class="section" style="background:#fff;text-align:center">
+    <div class="container">
+      <div class="section-tag" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</div>
+      <h2 data-fr="Opérationnel en 30 minutes" data-en="Up and running in 30 minutes">Opérationnel en 30 minutes</h2>
+      <p class="lead" style="margin:14px auto 0;text-align:center" data-fr="Pas de formation requise. Pas de consultant. Juste vous et vos immeubles." data-en="No training required. No consultant. Just you and your properties.">Pas de formation requise. Pas de consultant. Juste vous et vos immeubles.</p>
+      <div class="how-grid">
+        <div class="how-step reveal">
+          <div class="how-num">1</div>
+          <div class="how-title" data-fr="Créez votre compte" data-en="Create your account">Créez votre compte</div>
+          <p class="how-desc" data-fr="2 minutes, gratuit, sans carte de crédit. Choisissez votre plan et configurez votre profil en quelques clics." data-en="2 minutes, free, no credit card. Choose your plan and set up your profile in a few clicks.">2 minutes, gratuit, sans carte de crédit. Choisissez votre plan et configurez votre profil en quelques clics.</p>
+        </div>
+        <div class="how-step reveal reveal-d1">
+          <div class="how-num">2</div>
+          <div class="how-title" data-fr="Ajoutez vos immeubles" data-en="Add your properties">Ajoutez vos immeubles</div>
+          <p class="how-desc" data-fr="Entrez vos propriétés, logements et baux. Unitly génère automatiquement le suivi des loyers, les alertes et le calendrier hypothécaire." data-en="Enter your properties, units and leases. Unitly automatically generates rent tracking, alerts and your mortgage schedule.">Entrez vos propriétés, logements et baux. Unitly génère automatiquement le suivi des loyers, les alertes et le calendrier hypothécaire.</p>
+        </div>
+        <div class="how-step reveal reveal-d2">
+          <div class="how-num">3</div>
+          <div class="how-title" data-fr="Gérez tout en un endroit" data-en="Manage everything in one place">Gérez tout en un endroit</div>
+          <p class="how-desc" data-fr="TAL calculé automatiquement, Relevé 31 en 30 secondes, rapports pour votre comptable — sans jongler entre plusieurs outils." data-en="TAL calculated automatically, Relevé 31 in 30 seconds, reports for your accountant — no more juggling tools.">TAL calculé automatiquement, Relevé 31 en 30 secondes, rapports pour votre comptable — sans jongler entre plusieurs outils.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Problème → Solution -->
   <section class="section" style="background:var(--surface)">
