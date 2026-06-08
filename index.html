@@ -4,6 +4,22 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Unitly — Gestion locative simplifiée</title>
+<meta name="description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. TAL, Relevé 31, hypothèques, Airbnb — tout en un. Commencez gratuitement, sans carte de crédit."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://unitly.ca"/>
+<meta property="og:site_name" content="Unitly"/>
+<meta property="og:locale" content="fr_CA"/>
+<meta property="og:title" content="Unitly — Gestion locative simplifiée"/>
+<meta property="og:description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. TAL, Relevé 31, hypothèques, Airbnb — tout en un."/>
+<meta property="og:image" content="https://unitly.ca/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Unitly — Gestion locative simplifiée"/>
+<meta name="twitter:description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens."/>
+<meta name="twitter:image" content="https://unitly.ca/og-image.png"/>
+<link rel="canonical" href="https://unitly.ca"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -253,6 +269,11 @@ footer{background:#070D1A;padding:64px 6% 36px}
 .mobile-link{padding:12px 16px;border-radius:9px;font-size:15px;font-weight:500;color:var(--sub);background:none;border:none;cursor:pointer;font-family:inherit;text-align:left;text-decoration:none;display:block;transition:background 0.15s,color 0.15s;width:100%}
 .mobile-link:hover{background:var(--surface);color:var(--navy)}
 .mobile-menu-sep{height:1px;background:var(--border);margin:8px 0}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.6s cubic-bezier(0.4,0,0.2,1),transform 0.6s cubic-bezier(0.4,0,0.2,1)}
+.reveal.revealed{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:0.1s}
+.reveal-d2{transition-delay:0.2s}
+.reveal-d3{transition-delay:0.3s}
 .pour-qui-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;max-width:1140px}
 @media(max-width:900px){
@@ -945,18 +966,18 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="contact-grid">
         <!-- Formulaire -->
         <div>
-          <div style="display:flex;flex-direction:column;gap:14px">
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="submitContactForm(event)" style="display:flex;flex-direction:column;gap:14px">
             <div>
               <label style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px" data-fr="Nom complet" data-en="Full name">Nom complet</label>
-              <input type="text" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;color:var(--text);outline:none;transition:border-color 0.2s" onfocus="this.style.borderColor='#3B5BDB'" onblur="this.style.borderColor='var(--border)'" data-fr-placeholder="Jean Tremblay" data-en-placeholder="John Smith" placeholder="Jean Tremblay"/>
+              <input type="text" name="name" required style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;color:var(--text);outline:none;transition:border-color 0.2s" onfocus="this.style.borderColor='#3B5BDB'" onblur="this.style.borderColor='var(--border)'" data-fr-placeholder="Jean Tremblay" data-en-placeholder="John Smith" placeholder="Jean Tremblay"/>
             </div>
             <div>
               <label style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px">Courriel</label>
-              <input type="email" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;color:var(--text);outline:none;transition:border-color 0.2s" onfocus="this.style.borderColor='#3B5BDB'" onblur="this.style.borderColor='var(--border)'" placeholder="jean@exemple.ca"/>
+              <input type="email" name="email" required style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;color:var(--text);outline:none;transition:border-color 0.2s" onfocus="this.style.borderColor='#3B5BDB'" onblur="this.style.borderColor='var(--border)'" placeholder="jean@exemple.ca"/>
             </div>
             <div>
               <label style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px" data-fr="Sujet" data-en="Subject">Sujet</label>
-              <select style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;color:var(--text);outline:none;appearance:none;background:#fff;transition:border-color 0.2s" onfocus="this.style.borderColor='#3B5BDB'" onblur="this.style.borderColor='var(--border)'">
+              <select name="subject" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;color:var(--text);outline:none;appearance:none;background:#fff;transition:border-color 0.2s" onfocus="this.style.borderColor='#3B5BDB'" onblur="this.style.borderColor='var(--border)'">
                 <option data-fr="Support technique" data-en="Technical support">Support technique</option>
                 <option data-fr="Question sur les tarifs" data-en="Pricing question">Question sur les tarifs</option>
                 <option data-fr="Partenariat" data-en="Partnership">Partenariat</option>
@@ -965,10 +986,12 @@ footer{background:#070D1A;padding:64px 6% 36px}
             </div>
             <div>
               <label style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px" data-fr="Message" data-en="Message">Message</label>
-              <textarea rows="5" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;color:var(--text);outline:none;resize:vertical;transition:border-color 0.2s;line-height:1.6" onfocus="this.style.borderColor='#3B5BDB'" onblur="this.style.borderColor='var(--border)'" data-fr-placeholder="Comment pouvons-nous vous aider ?" data-en-placeholder="How can we help you?">Votre message ici...</textarea>
+              <textarea name="message" rows="5" required style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;color:var(--text);outline:none;resize:vertical;transition:border-color 0.2s;line-height:1.6" onfocus="this.style.borderColor='#3B5BDB'" onblur="this.style.borderColor='var(--border)'" placeholder="Comment pouvons-nous vous aider ?"></textarea>
             </div>
-            <button class="btn btn-dark" style="width:100%;justify-content:center;padding:14px;font-size:15px;border-radius:var(--rl)" data-fr="Envoyer le message" data-en="Send message">Envoyer le message</button>
-          </div>
+            <button type="submit" id="contact-submit" class="btn btn-dark" style="width:100%;justify-content:center;padding:14px;font-size:15px;border-radius:var(--rl)" data-fr="Envoyer le message" data-en="Send message">Envoyer le message</button>
+            <div id="form-success" style="display:none;background:var(--green-light);border:1px solid var(--green);border-radius:var(--r);padding:14px 16px;font-size:14px;color:var(--green);font-weight:600" data-fr="Message envoyé ! On vous répond en moins de 24h." data-en="Message sent! We'll reply within 24 hours.">Message envoyé ! On vous répond en moins de 24h.</div>
+            <div id="form-error" style="display:none;background:#FEF2F2;border:1px solid #FECACA;border-radius:var(--r);padding:14px 16px;font-size:14px;color:#DC2626;font-weight:600" data-fr="Une erreur est survenue. Écrivez-nous directement à support@unitly.ca" data-en="An error occurred. Email us directly at support@unitly.ca">Une erreur est survenue. Écrivez-nous directement à support@unitly.ca</div>
+          </form>
         </div>
         <!-- Infos contact -->
         <div style="display:flex;flex-direction:column;gap:20px">
@@ -1102,6 +1125,7 @@ function goPage(id) {
       next.style.transform = 'translateY(0)';
     });
     window.scrollTo({top:0, behavior:'smooth'});
+    setTimeout(initReveals, 50);
   }, 200);
   currentPage = id;
   document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
@@ -1152,9 +1176,47 @@ window.addEventListener('scroll', () => {
 function toggleMobileMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
 function closeMobileMenu(){document.getElementById('mobile-menu').classList.remove('open')}
 
+// ── FORMSPREE ──
+async function submitContactForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contact-submit');
+  const ok  = document.getElementById('form-success');
+  const err = document.getElementById('form-error');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  ok.style.display = 'none';
+  err.style.display = 'none';
+  try {
+    const res = await fetch(e.target.action, {method:'POST',body:new FormData(e.target),headers:{Accept:'application/json'}});
+    if (res.ok) { e.target.reset(); ok.style.display = 'block'; }
+    else { err.style.display = 'block'; }
+  } catch { err.style.display = 'block'; }
+  btn.disabled = false;
+  btn.style.opacity = '1';
+}
+
+// ── SCROLL REVEAL ──
+function initReveals() {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
+  }, {threshold: 0.1, rootMargin:'0px 0px -32px 0px'});
+  document.querySelectorAll('.reveal:not(.revealed)').forEach(el => io.observe(el));
+}
+function setupRevealClasses() {
+  document.querySelectorAll('.prob-card').forEach((el,i) => { el.classList.add('reveal'); if(i===1) el.classList.add('reveal-d1'); });
+  document.querySelectorAll('.pour-qui-grid > div').forEach((el,i) => { el.classList.add('reveal'); if(i===1) el.classList.add('reveal-d1'); if(i===2) el.classList.add('reveal-d2'); });
+  document.querySelectorAll('.testi-card').forEach((el,i) => { el.classList.add('reveal'); if(i===1) el.classList.add('reveal-d1'); if(i===2) el.classList.add('reveal-d2'); });
+  document.querySelectorAll('.stats-grid > div').forEach((el,i) => { el.classList.add('reveal'); if(i===1) el.classList.add('reveal-d1'); if(i===2) el.classList.add('reveal-d2'); if(i===3) el.classList.add('reveal-d3'); });
+  document.querySelectorAll('.plan-card').forEach((el,i) => { el.classList.add('reveal'); if(i===1) el.classList.add('reveal-d1'); if(i===2) el.classList.add('reveal-d2'); if(i===3) el.classList.add('reveal-d3'); });
+  document.querySelectorAll('.faq-item').forEach(el => el.classList.add('reveal'));
+  document.querySelectorAll('.pp-left, .pp-right').forEach(el => el.classList.add('reveal'));
+}
+
 // ── PAGE INIT ──
 document.getElementById('page-accueil').style.opacity = '1';
 document.getElementById('page-accueil').style.transform = 'translateY(0)';
+setupRevealClasses();
+initReveals();
 </script>
 
 <!-- Cookie Banner -->
