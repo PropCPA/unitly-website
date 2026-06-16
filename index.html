@@ -347,32 +347,6 @@ footer{background:#070D1A;padding:64px 6% 36px}
 .am-at{font-size:10px;font-weight:600;color:#111}
 .am-as{font-size:9px;color:#888;margin-top:1px}
 
-/* Feature pane right — light */
-.pp-right{background:#F5F5F7;border-radius:var(--rl);padding:22px;border:1px solid #E8E8ED}
-.pf-t{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:12px}
-.pf-card{background:#fff;border:1px solid #E8E8ED;border-radius:9px;padding:12px 14px;margin-bottom:8px}
-.pf-card:last-child{margin-bottom:0}
-.pf-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid #F0F0F2;font-size:12px;gap:8px}
-.pf-row:last-child{border:none}
-.pf-k{color:#555;font-size:12px;flex:1}
-.pf-name{color:#111;font-weight:600;font-size:12px}
-.pf-sub{color:#888;font-size:10px;margin-top:2px}
-.pf-g{color:#16a34a;font-weight:700}
-.pf-r{color:#dc2626;font-weight:700}
-.pf-a{color:#d97706;font-weight:700}
-.pf-b{color:#2563EB;font-weight:700}
-.pf-pu{color:#7C3AED;font-weight:700}
-.pf-pill-g{color:#16a34a;background:#F0FDF4;font-size:10px;font-weight:700;border-radius:4px;padding:2px 7px;white-space:nowrap}
-.pf-pill-r{color:#dc2626;background:#FEF2F2;font-size:10px;font-weight:700;border-radius:4px;padding:2px 7px;white-space:nowrap}
-.pf-pill-a{color:#d97706;background:#FFFBEB;font-size:10px;font-weight:700;border-radius:4px;padding:2px 7px;white-space:nowrap}
-.pf-badge-h{color:#dc2626;border:1.5px solid #dc2626;font-size:9px;font-weight:700;border-radius:3px;padding:1px 5px}
-.pf-badge-m{color:#ea580c;border:1.5px solid #ea580c;font-size:9px;font-weight:700;border-radius:3px;padding:1px 5px}
-.pf-badge-l{color:#9ca3af;border:1.5px solid #d1d5db;font-size:9px;font-weight:700;border-radius:3px;padding:1px 5px}
-.pf-alert{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid #F0F0F2}
-.pf-alert:last-child{border:none}
-.pf-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:4px}
-.pf-at{font-size:12px;font-weight:600;color:#111}
-.pf-as{font-size:10px;color:#888;margin-top:1px}
 </style>
 </head>
 <body>
@@ -645,7 +619,6 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="prod-tabs-nav" id="prod-tabs-nav">
       <button class="prod-tab-btn active" onclick="goTab('tal',this)" data-fr="Hausse TAL" data-en="TAL Increase">Hausse TAL</button>
       <button class="prod-tab-btn" onclick="goTab('loyers',this)" data-fr="Loyers" data-en="Rent">Loyers</button>
-      <button class="prod-tab-btn" onclick="goTab('releve',this)" data-fr="Relevé 31" data-en="Relevé 31">Relevé 31</button>
       <button class="prod-tab-btn" onclick="goTab('hypoth',this)" data-fr="Hypothèques" data-en="Mortgages">Hypothèques</button>
       <button class="prod-tab-btn" onclick="goTab('rapports',this)" data-fr="Rapports" data-en="Reports">Rapports</button>
       <button class="prod-tab-btn" onclick="goTab('airbnb',this)" data-fr="Airbnb" data-en="Airbnb">Airbnb</button>
@@ -670,20 +643,18 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <div class="pp-badge" data-fr="Exclusif Canada" data-en="Canada exclusive">Exclusif Canada</div>
       </div>
       <div class="pp-right">
-        <div class="pf-t" data-fr="Calcul TAL — 2026" data-en="TAL Calculation — 2026">Calcul TAL — 2026</div>
-        <div class="pf-card">
-          <div class="pf-row"><span class="pf-k" data-fr="Taxes municipales" data-en="Municipal taxes">Taxes municipales</span><span class="pf-b">+3.7%</span></div>
-          <div class="pf-row"><span class="pf-k" data-fr="Assurances" data-en="Insurance">Assurances</span><span class="pf-b">+4.9%</span></div>
-          <div class="pf-row"><span class="pf-k" data-fr="Chauffage" data-en="Heating">Chauffage</span><span class="pf-b">+4.7%</span></div>
-          <div class="pf-row"><span class="pf-k" data-fr="Entretien" data-en="Maintenance">Entretien</span><span class="pf-b">+6.7%</span></div>
+        <div class="pp-vt" data-fr="Calcul TAL — 2024" data-en="TAL Calculation — 2024">Calcul TAL — 2024</div>
+        <div class="v-row"><span class="v-k" data-fr="Taxes municipales" data-en="Municipal taxes">Taxes municipales</span><span class="v-p">+3.7%</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Assurances" data-en="Insurance">Assurances</span><span class="v-p">+4.9%</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Chauffage" data-en="Heating">Chauffage</span><span class="v-p">+4.7%</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Entretien" data-en="Maintenance">Entretien</span><span class="v-p">+6.7%</span></div>
+        <div style="margin-top:16px;text-align:right">
+          <div style="font-size:10px;color:rgba(255,255,255,0.3);margin-bottom:4px" data-fr="Hausse max. pondérée" data-en="Max weighted increase">Hausse max. pondérée</div>
+          <div style="font-size:32px;font-weight:800;color:#fff;letter-spacing:-1px">+3.24%</div>
         </div>
-        <div class="pf-card" style="text-align:right">
-          <div style="font-size:10px;color:#888;margin-bottom:4px" data-fr="Hausse max. pondérée" data-en="Max weighted increase">Hausse max. pondérée</div>
-          <div style="font-size:28px;font-weight:800;color:#111;letter-spacing:-1px">+3.24%</div>
-        </div>
-        <div class="pf-card" style="display:flex;justify-content:space-between;align-items:center">
-          <span style="font-size:12px;color:#888" data-fr="Nouveau loyer suggéré" data-en="Suggested new rent">Nouveau loyer suggéré</span>
-          <span style="font-size:16px;font-weight:800;color:#16a34a">1 290 $<span style="font-size:10px;color:#888;font-weight:400;margin-left:5px" data-fr="vs 1 250 $" data-en="vs $1,250">vs 1 250 $</span></span>
+        <div style="margin-top:14px;background:rgba(12,166,120,0.12);border:1px solid rgba(12,166,120,0.2);border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:12px;color:rgba(255,255,255,0.35)" data-fr="Nouveau loyer suggéré" data-en="Suggested new rent">Nouveau loyer suggéré</span>
+          <span style="font-size:18px;font-weight:800;color:#6ee7b7">1 290 $<span style="font-size:11px;color:rgba(255,255,255,0.3);margin-left:6px;font-weight:400" data-fr="vs 1 250 $" data-en="vs $1,250">vs 1 250 $</span></span>
         </div>
       </div>
     </div>
@@ -699,36 +670,16 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Sélecteur d'année pour consulter l'historique" data-en="Year selector to browse history">Sélecteur d'année pour consulter l'historique</span></div>
         </div>
       </div>
-      <div class="pp-right" style="padding:0;overflow:hidden">
-        <img src="screenshots/loyers.png" style="width:100%;display:block" alt="Suivi des loyers"/>
-      </div>
-    </div>
-
-    <div class="prod-pane" id="pt-releve">
-      <div class="pp-left">
-        <h3 data-fr="Relevé 31" data-en="Relevé 31">Relevé 31</h3>
-        <p data-fr="Générez vos relevés fiscaux pour Revenu Québec en 30 secondes. La règle du 1er janvier est appliquée automatiquement — seuls les locataires présents à cette date reçoivent un relevé." data-en="Generate your tax statements for Revenu Québec in 30 seconds. The January 1st rule is automatically applied — only tenants present on that date receive a statement.">Générez vos relevés fiscaux pour Revenu Québec en 30 secondes. La règle du 1er janvier est appliquée automatiquement.</p>
-        <div class="pp-pts">
-          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Généré en 30 secondes par locataire" data-en="Generated in 30 seconds per tenant">Généré en 30 secondes par locataire</span></div>
-          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Règle du 1er janvier appliquée automatiquement" data-en="January 1st rule applied automatically">Règle du 1er janvier appliquée automatiquement</span></div>
-          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Pro-rata pour les arrivées en cours d'année" data-en="Pro-rata for mid-year arrivals">Pro-rata pour les arrivées en cours d'année</span></div>
-          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Colocation supportée — parts égales ou définies" data-en="Co-tenancy supported — equal or defined shares">Colocation supportée — parts égales ou définies</span></div>
-        </div>
-        <div class="pp-badge" data-fr="Exclusif Canada" data-en="Canada exclusive">Exclusif Canada</div>
-      </div>
       <div class="pp-right">
-        <div class="pf-t" data-fr="Relevés 31 — 2025" data-en="Relevé 31 — 2025">Relevés 31 — 2025</div>
-        <div class="pf-card">
-          <div class="pf-row"><span class="pf-name">Marie Tremblay</span><span class="pf-pill-g" data-fr="Transmis" data-en="Sent">Transmis</span></div>
-          <div class="pf-row"><span class="pf-name">J.-F. Gagnon</span><span style="color:#888;font-size:11px" data-fr="En attente" data-en="Pending">En attente</span></div>
-          <div class="pf-row"><span class="pf-name">Sophie Lavoie</span><span style="color:#888;font-size:11px" data-fr="En attente" data-en="Pending">En attente</span></div>
-        </div>
-        <div class="pf-card">
-          <div style="font-size:10px;color:#888;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.06em">Marie Tremblay</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-            <div style="background:#F5F5F7;border-radius:7px;padding:10px"><div style="font-size:9px;color:#888;margin-bottom:3px">Case A</div><div style="font-size:16px;font-weight:800;color:#111">15 000 $</div></div>
-            <div style="background:#EFF6FF;border-radius:7px;padding:10px;border:1px solid #BFDBFE"><div style="font-size:9px;color:#2563EB;margin-bottom:3px">Case B</div><div style="font-size:16px;font-weight:800;color:#2563EB">14 100 $</div></div>
-          </div>
+        <div class="pp-vt" data-fr="Juin 2024" data-en="June 2024">Juin 2024</div>
+        <div class="v-row"><span class="v-k">Marie Tremblay</span><span class="v-g" data-fr="Payé" data-en="Paid">Payé</span></div>
+        <div class="v-row"><span class="v-k">J.-F. Gagnon</span><span class="v-g" data-fr="Payé" data-en="Paid">Payé</span></div>
+        <div class="v-row"><span class="v-k">Sophie Lavoie</span><span class="v-g" data-fr="Payé" data-en="Paid">Payé</span></div>
+        <div class="v-row"><span class="v-k">Patrick Bouchard</span><span class="v-r" data-fr="Impayé" data-en="Unpaid">Impayé</span></div>
+        <div class="v-row"><span class="v-k">Isabelle Roy</span><span class="v-g" data-fr="Payé" data-en="Paid">Payé</span></div>
+        <div style="margin-top:16px;background:rgba(255,255,255,0.05);border-radius:10px;padding:12px 14px">
+          <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:7px"><span style="color:rgba(255,255,255,0.35)" data-fr="Collecté ce mois" data-en="Collected this month">Collecté ce mois</span><span style="color:#6ee7b7;font-weight:700">87%</span></div>
+          <div style="height:5px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden"><div style="width:87%;height:100%;background:#0CA678;border-radius:3px"></div></div>
         </div>
       </div>
     </div>
@@ -745,22 +696,22 @@ footer{background:#070D1A;padding:64px 6% 36px}
         </div>
       </div>
       <div class="pp-right">
-        <div class="pf-t" data-fr="Comparateur de renouvellement" data-en="Renewal comparator">Comparateur de renouvellement</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
-          <div class="pf-card" style="margin:0">
-            <div style="font-size:9px;color:#888;margin-bottom:4px;text-transform:uppercase" data-fr="Actuel" data-en="Current">Actuel</div>
-            <div style="font-size:22px;font-weight:800;color:#111;letter-spacing:-0.8px">4.89%</div>
-            <div style="font-size:10px;color:#888;margin-top:3px" data-fr="3 850 $/mois" data-en="$3,850/mo">3 850 $/mois</div>
+        <div class="pp-vt" data-fr="Comparateur de renouvellement" data-en="Renewal comparator">Comparateur de renouvellement</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px">
+            <div style="font-size:9px;color:rgba(255,255,255,0.3);margin-bottom:5px;text-transform:uppercase" data-fr="Actuel" data-en="Current">Actuel</div>
+            <div style="font-size:24px;font-weight:800;color:#fff;letter-spacing:-0.8px">4.89%</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.3);margin-top:3px" data-fr="3 850 $/mois" data-en="$3,850/mo">3 850 $/mois</div>
           </div>
-          <div class="pf-card" style="margin:0;border-color:#BFDBFE;background:#EFF6FF">
-            <div style="font-size:9px;color:#2563EB;margin-bottom:4px;text-transform:uppercase" data-fr="Scénario A" data-en="Scenario A">Scénario A</div>
-            <div style="font-size:22px;font-weight:800;color:#111;letter-spacing:-0.8px">4.45%</div>
-            <div style="font-size:10px;color:#16a34a;margin-top:3px;font-weight:600" data-fr="Économie: 1 440 $" data-en="Savings: $1,440">Économie: 1 440 $</div>
+          <div style="background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:10px;padding:14px">
+            <div style="font-size:9px;color:#a5b4fc;margin-bottom:5px;text-transform:uppercase" data-fr="Scénario A" data-en="Scenario A">Scénario A</div>
+            <div style="font-size:24px;font-weight:800;color:#fff;letter-spacing:-0.8px">4.45%</div>
+            <div style="font-size:10px;color:#6ee7b7;margin-top:3px" data-fr="Économie: 1 440 $" data-en="Savings: $1,440">Économie: 1 440 $</div>
           </div>
         </div>
-        <div class="pf-card" style="display:flex;justify-content:space-between;align-items:center">
-          <span style="font-size:12px;color:#888" data-fr="Meilleure offre" data-en="Best offer">Meilleure offre</span>
-          <span style="font-size:13px;font-weight:700;color:#16a34a">Desjardins — 4.45%</span>
+        <div style="background:rgba(12,166,120,0.1);border:1px solid rgba(12,166,120,0.2);border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:12px;color:rgba(255,255,255,0.35)" data-fr="Meilleure offre" data-en="Best offer">Meilleure offre</span>
+          <span style="font-size:14px;font-weight:700;color:#6ee7b7">Desjardins — 4.45%</span>
         </div>
       </div>
     </div>
@@ -776,8 +727,17 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Analyse vendre vs garder un immeuble" data-en="Sell vs keep property analysis">Analyse vendre vs garder un immeuble</span></div>
         </div>
       </div>
-      <div class="pp-right" style="padding:0;overflow:hidden">
-        <img src="screenshots/projections.png" style="width:100%;display:block" alt="Projections financières"/>
+      <div class="pp-right">
+        <div class="pp-vt" data-fr="État des résultats 2024" data-en="Income statement 2024">État des résultats 2024</div>
+        <div class="v-row"><span class="v-k" data-fr="Revenus collectés" data-en="Collected revenue">Revenus collectés</span><span class="v-g">+82 860 $</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Dépenses exploitation" data-en="Operating expenses">Dépenses exploitation</span><span class="v-r">−35 400 $</span></div>
+        <div class="v-row"><span class="v-k">NOI</span><span class="v-p">+47 460 $</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Service de la dette" data-en="Debt service">Service de la dette</span><span class="v-r">−38 400 $</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Cash-flow net" data-en="Net cash flow">Cash-flow net</span><span class="v-g">+9 060 $</span></div>
+        <div style="margin-top:14px;background:rgba(59,91,219,0.1);border:1px solid rgba(59,91,219,0.2);border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:12px;color:rgba(255,255,255,0.35)" data-fr="Projection 5 ans" data-en="5-year projection">Projection 5 ans</span>
+          <span style="font-size:18px;font-weight:800;color:#fff">+27.4%<span style="font-size:11px;color:rgba(255,255,255,0.3);margin-left:5px;font-weight:400" data-fr="revenus" data-en="revenue">revenus</span></span>
+        </div>
       </div>
     </div>
 
@@ -793,16 +753,14 @@ footer{background:#070D1A;padding:64px 6% 36px}
         </div>
       </div>
       <div class="pp-right">
-        <div class="pf-t" data-fr="Réservations — Mai 2026" data-en="Bookings — May 2026">Réservations — Mai 2026</div>
-        <div class="pf-card">
-          <div class="pf-row"><span class="pf-name">John Smith</span><span class="pf-g">340 $</span></div>
-          <div class="pf-row"><span class="pf-name">Marie Dupont</span><span class="pf-g">255 $</span></div>
-          <div class="pf-row"><span class="pf-name">R. Johnson</span><span class="pf-g">425 $</span></div>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
-          <div class="pf-card" style="text-align:center;margin:0"><div style="font-size:18px;font-weight:800;color:#111">47</div><div style="font-size:9px;color:#888;margin-top:2px" data-fr="nuitées" data-en="nights">nuitées</div></div>
-          <div class="pf-card" style="text-align:center;margin:0;background:#F0FDF4;border-color:#BBF7D0"><div style="font-size:15px;font-weight:800;color:#16a34a">1 020 $</div><div style="font-size:9px;color:#888;margin-top:2px" data-fr="revenu moy." data-en="avg revenue">revenu moy.</div></div>
-          <div class="pf-card" style="text-align:center;margin:0"><div style="font-size:18px;font-weight:800;color:#111">106 $</div><div style="font-size:9px;color:#888;margin-top:2px" data-fr="par nuit" data-en="per night">par nuit</div></div>
+        <div class="pp-vt" data-fr="Réservations — Mai 2024" data-en="Bookings — May 2024">Réservations — Mai 2024</div>
+        <div class="v-row"><span class="v-k">John Smith</span><span class="v-g">340 $</span></div>
+        <div class="v-row"><span class="v-k">Marie Dupont</span><span class="v-g">255 $</span></div>
+        <div class="v-row"><span class="v-k">R. Johnson</span><span class="v-g">425 $</span></div>
+        <div style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+          <div style="background:rgba(255,255,255,0.05);border-radius:9px;padding:12px;text-align:center"><div style="font-size:18px;font-weight:800;color:#fff">47</div><div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:2px" data-fr="nuitées" data-en="nights">nuitées</div></div>
+          <div style="background:rgba(255,255,255,0.05);border-radius:9px;padding:12px;text-align:center"><div style="font-size:18px;font-weight:800;color:#6ee7b7">1 020 $</div><div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:2px" data-fr="revenu moy." data-en="avg revenue">revenu moy.</div></div>
+          <div style="background:rgba(255,255,255,0.05);border-radius:9px;padding:12px;text-align:center"><div style="font-size:18px;font-weight:800;color:#fff">106 $</div><div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:2px" data-fr="par nuit" data-en="per night">par nuit</div></div>
         </div>
       </div>
     </div>
@@ -818,8 +776,16 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Assignation à un gestionnaire spécifique" data-en="Assignment to a specific manager">Assignation à un gestionnaire spécifique</span></div>
         </div>
       </div>
-      <div class="pp-right" style="padding:0;overflow:hidden">
-        <img src="screenshots/maintenance.png" style="width:100%;display:block" alt="Maintenance"/>
+      <div class="pp-right">
+        <div class="pp-vt" data-fr="Demandes actives" data-en="Active requests">Demandes actives</div>
+        <div class="v-row"><span class="v-k" data-fr="Fuite robinet cuisine" data-en="Kitchen faucet leak">Fuite robinet cuisine</span><span class="v-g" data-fr="Résolu" data-en="Resolved">Résolu</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Chauffage insuffisant" data-en="Insufficient heating">Chauffage insuffisant</span><span class="v-r" data-fr="Ouvert" data-en="Open">Ouvert</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Serrure porte entrée" data-en="Entry door lock">Serrure porte entrée</span><span class="v-a" data-fr="En cours" data-en="In progress">En cours</span></div>
+        <div style="margin-top:14px;background:rgba(255,255,255,0.05);border-radius:10px;padding:12px 14px">
+          <div style="font-size:10px;color:rgba(255,255,255,0.25);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.06em" data-fr="Fournisseurs actifs" data-en="Active suppliers">Fournisseurs actifs</div>
+          <div class="v-row"><span class="v-k">Plomberie Express</span><span style="color:rgba(255,255,255,0.45);font-size:11px">4.5 / 5</span></div>
+          <div class="v-row"><span class="v-k">Électro Pro RBQ</span><span style="color:rgba(255,255,255,0.45);font-size:11px">4.0 / 5</span></div>
+        </div>
       </div>
     </div>
 
@@ -835,14 +801,11 @@ footer{background:#070D1A;padding:64px 6% 36px}
         </div>
       </div>
       <div class="pp-right">
-        <div class="pf-t" data-fr="Alertes actives" data-en="Active alerts">Alertes actives</div>
-        <div class="pf-card">
-          <div class="pf-alert"><div class="pf-dot" style="background:#dc2626"></div><div><div class="pf-at" data-fr="Loyer en retard" data-en="Late rent">Loyer en retard</div><div class="pf-as">Patrick B. · 1 680 $</div></div></div>
-          <div class="pf-alert"><div class="pf-dot" style="background:#d97706"></div><div><div class="pf-at" data-fr="Bail expire dans 30j" data-en="Lease expires in 30d">Bail expire dans 30j</div><div class="pf-as">M. Tremblay</div></div></div>
-          <div class="pf-alert"><div class="pf-dot" style="background:#7C3AED"></div><div><div class="pf-at" data-fr="Renouvellement hypoth." data-en="Mortgage renewal">Renouvellement hypoth.</div><div class="pf-as" data-fr="6 mois · 882 René-Lév." data-en="6 months · 882 René-Lév.">6 mois · 882 René-Lév.</div></div></div>
-          <div class="pf-alert"><div class="pf-dot" style="background:#dc2626"></div><div><div class="pf-at" data-fr="Assurance expirée" data-en="Expired insurance">Assurance expirée</div><div class="pf-as">Électro Pro RBQ</div></div></div>
-          <div class="pf-alert"><div class="pf-dot" style="background:#16a34a"></div><div><div class="pf-at" data-fr="Relevé 31 prêt" data-en="Relevé 31 ready">Relevé 31 prêt</div><div class="pf-as" data-fr="5 locataires · à transmettre" data-en="5 tenants · ready to send">5 locataires · à transmettre</div></div></div>
-        </div>
+        <div class="pp-vt" data-fr="Alertes actives" data-en="Active alerts">Alertes actives</div>
+        <div class="v-row"><span class="v-k" data-fr="Loyer en retard" data-en="Late rent">Loyer en retard</span><span class="v-r">Patrick B.</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Bail expire dans 30j" data-en="Lease expires in 30d">Bail expire dans 30j</span><span class="v-a">M. Tremblay</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Renouvellement hypoth." data-en="Mortgage renewal">Renouvellement hypoth.</span><span class="v-p">6 mois</span></div>
+        <div class="v-row"><span class="v-k" data-fr="Assurance expirée" data-en="Expired insurance">Assurance expirée</span><span class="v-r">Électro Pro</span></div>
       </div>
     </div>
 
@@ -858,8 +821,20 @@ footer{background:#070D1A;padding:64px 6% 36px}
         </div>
         <div class="pp-badge" data-fr="Nouveau" data-en="New">Nouveau</div>
       </div>
-      <div class="pp-right" style="padding:0;overflow:hidden">
-        <img src="screenshots/communications.png" style="width:100%;display:block" alt="Communications"/>
+      <div class="pp-right">
+        <div class="pp-vt" data-fr="Envoi en masse — Novembre 2025" data-en="Bulk send — November 2025">Envoi en masse — Novembre 2025</div>
+        <div style="margin-bottom:12px;background:rgba(99,102,241,0.12);border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:12px 14px">
+          <div style="font-size:10px;color:rgba(255,255,255,0.3);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.06em" data-fr="Modèle sélectionné" data-en="Selected template">Modèle sélectionné</div>
+          <div style="font-size:13px;font-weight:700;color:#fff" data-fr="Rappel de loyer — Novembre 2025" data-en="Rent Reminder — November 2025">Rappel de loyer — Novembre 2025</div>
+        </div>
+        <div class="v-row"><span class="v-k">Marie Tremblay</span><span class="v-p" data-fr="Composer →" data-en="Compose →">Composer →</span></div>
+        <div class="v-row"><span class="v-k">J.-F. Gagnon</span><span class="v-p" data-fr="Composer →" data-en="Compose →">Composer →</span></div>
+        <div class="v-row"><span class="v-k">Sophie Lavoie</span><span class="v-p" data-fr="Composer →" data-en="Compose →">Composer →</span></div>
+        <div class="v-row"><span class="v-k">Patrick Bouchard</span><span class="v-p" data-fr="Composer →" data-en="Compose →">Composer →</span></div>
+        <div style="margin-top:14px;background:rgba(255,255,255,0.05);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:11px;color:rgba(255,255,255,0.35)" data-fr="36 locataires · envoi BCC" data-en="36 tenants · BCC send">36 locataires · envoi BCC</span>
+          <span style="font-size:12px;font-weight:700;color:#6ee7b7" data-fr="Envoyer tout →" data-en="Send all →">Envoyer tout →</span>
+        </div>
       </div>
     </div>
 
