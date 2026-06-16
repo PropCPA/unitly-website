@@ -444,7 +444,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span>
       </p>
       <div class="app-mock" style="padding:0;height:auto;display:block">
-        <img src="screenshots/dashboard.png" style="width:100%;display:block;border-radius:var(--rl)" alt="Tableau de bord Unitly"/>
+        <img id="dashboard-img" src="screenshots/dashboard.png" style="width:100%;display:block;border-radius:var(--rl)" alt="Tableau de bord Unitly"/>
       </div>
     </div>
   </section>
@@ -1162,6 +1162,8 @@ function toggleLang() {
   document.querySelectorAll('[data-fr-placeholder]').forEach(el => {
     el.placeholder = el.getAttribute('data-' + lang + '-placeholder') || el.placeholder;
   });
+  const dashImg = document.getElementById('dashboard-img');
+  if (dashImg) dashImg.src = lang === 'en' ? 'screenshots/dashboard_en.png' : 'screenshots/dashboard.png';
   // update prices
   const suf = lang === 'fr' ? '/mois' : '/mo';
   const p = pricingMode === 'm' ? {p1:'19 $',p2:'34 $',p3:'59 $'} : {p1:'16 $',p2:'28 $',p3:'49 $'};
