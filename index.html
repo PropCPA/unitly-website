@@ -1,25 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Unitly — Gestion locative simplifiée</title>
-<meta name="description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. TAL, Relevé 31, hypothèques, Airbnb — tout en un. Commencez gratuitement, sans carte de crédit."/>
+<title>KEVLY — La clé de votre gestion locative</title>
+<meta name="description" content="La plateforme de gestion locative conçue pour les propriétaires québécois. TAL 2026, Relevé 31, hypothèques, app mobile. Essai gratuit 30 jours, aucune carte requise."/>
 <meta name="robots" content="index, follow"/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://unitly.ca"/>
-<meta property="og:site_name" content="Unitly"/>
+<meta property="og:url" content="https://kevly.ca"/>
+<meta property="og:site_name" content="Kevly"/>
 <meta property="og:locale" content="fr_CA"/>
-<meta property="og:title" content="Unitly — Gestion locative simplifiée"/>
-<meta property="og:description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. TAL, Relevé 31, hypothèques, Airbnb — tout en un."/>
-<meta property="og:image" content="https://unitly.ca/og-image.png"/>
+<meta property="og:title" content="KEVLY — La clé de votre gestion locative"/>
+<meta property="og:description" content="La plateforme de gestion locative conçue pour les propriétaires québécois. TAL 2026, Relevé 31, hypothèques, app mobile — tout en un, sans frais cachés."/>
+<meta property="og:image" content="https://kevly.ca/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Unitly — Gestion locative simplifiée"/>
-<meta name="twitter:description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens."/>
-<meta name="twitter:image" content="https://unitly.ca/og-image.png"/>
-<link rel="canonical" href="https://unitly.ca"/>
+<meta name="twitter:title" content="KEVLY — La clé de votre gestion locative"/>
+<meta name="twitter:description" content="La plateforme de gestion locative conçue pour les propriétaires québécois. TAL 2026, Relevé 31, hypothèques, app mobile."/>
+<meta name="twitter:image" content="https://kevly.ca/og-image.png"/>
+<link rel="canonical" href="https://kevly.ca"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -40,8 +40,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.88);backdrop
 nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
 .nav-inner{max-width:1140px;margin:0 auto;width:100%;display:flex;align-items:center;gap:0}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:40px}
-.nav-logo-mark{width:32px;height:32px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.nav-logo-text{font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-0.6px}
+.nav-logo-mark{width:32px;height:32px;background:transparent;border-radius:0;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo-text{font-size:18px;font-weight:700;color:var(--navy);letter-spacing:0.06em}
 .nav-links{display:flex;gap:4px;flex:1}
 .nav-link{padding:7px 14px;border-radius:9px;font-size:14px;font-weight:500;color:var(--sub);text-decoration:none;border:none;background:transparent;cursor:pointer;font-family:inherit;letter-spacing:-0.1px;transition:color 0.15s,background 0.15s}
 .nav-link:hover{color:var(--text);background:var(--surface)}
@@ -294,6 +294,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
   .nav-hamburger{display:flex}
   .plans-grid{grid-template-columns:1fr 1fr}
   .pour-qui-grid{grid-template-columns:1fr}
+  .mobile-section-grid{grid-template-columns:1fr!important}
+  .mobile-section-img{display:none}
   .contact-grid{grid-template-columns:1fr}
   .how-grid::before{display:none}
   .how-step{padding:0 16px 32px}
@@ -370,7 +372,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <rect x="9" y="9" width="6" height="6" rx="1.5" fill="white" opacity="0.35"/>
         </svg>
       </div>
-      <span class="nav-logo-text">unitly</span>
+      <span class="nav-logo-text" style="letter-spacing:0.06em">KEVLY</span>
     </a>
     <div class="nav-links">
       <button class="nav-link active" id="nl-accueil" onclick="goPage('accueil')" data-fr="Accueil" data-en="Home">Accueil</button>
@@ -380,8 +382,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
     </div>
     <div class="nav-right">
       <button class="lang-btn" id="lang-btn" onclick="toggleLang()">EN</button>
-      <a href="https://app.unitly.ca" class="btn btn-ghost" data-fr="Connexion" data-en="Login">Connexion</a>
-      <a href="https://app.unitly.ca/register" class="btn btn-dark" data-fr="Commencer" data-en="Get started">Commencer</a>
+      <a href="https://app.kevly.ca" class="btn btn-ghost" data-fr="Connexion" data-en="Login">Connexion</a>
+      <a href="https://app.kevly.ca/register" class="btn btn-dark" data-fr="Commencer" data-en="Get started">Commencer</a>
     </div>
   </div>
 </nav>
@@ -391,8 +393,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
   <button class="mobile-link" onclick="goPage('tarifs');closeMobileMenu()" data-fr="Tarifs" data-en="Pricing">Tarifs</button>
   <button class="mobile-link" onclick="goPage('contact');closeMobileMenu()" data-fr="Contact" data-en="Contact">Contact</button>
   <div class="mobile-menu-sep"></div>
-  <a href="https://app.unitly.ca" class="mobile-link" data-fr="Connexion" data-en="Login">Connexion</a>
-  <a href="https://app.unitly.ca/register" class="mobile-link" style="color:var(--blue);font-weight:700" data-fr="Commencer gratuitement →" data-en="Get started free →">Commencer gratuitement →</a>
+  <a href="https://app.kevly.ca" class="mobile-link" data-fr="Connexion" data-en="Login">Connexion</a>
+  <a href="https://app.kevly.ca/register" class="mobile-link" style="color:var(--blue);font-weight:700" data-fr="Commencer gratuitement →" data-en="Get started free →">Commencer gratuitement →</a>
 </div>
 
 <!-- ══════════════════════════════
@@ -404,21 +406,22 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="hero-inner">
       <div class="hero-badge">
         <div class="hero-badge-dot"></div>
-        <span data-fr="Nouveau — Emails aux locataires avec 14 modèles prêts" data-en="New — Tenant emails with 14 ready-made templates">Nouveau — Emails aux locataires avec 14 modèles prêts</span>
+        <span data-fr="Nouveau — App mobile + 14 modèles de communication inclus" data-en="New — Mobile app + 14 communication templates included">Nouveau — App mobile + 14 modèles de communication inclus</span>
       </div>
-      <h1 data-fr="Gérez vos immeubles.<br><em>Sans les maux de tête.</em>" data-en="Manage your properties.<br><em>Without the headaches.</em>">Gérez vos immeubles.<br><em>Sans les maux de tête.</em></h1>
-      <p class="hero-sub" data-fr="La plateforme de gestion locative conçue pour les propriétaires canadiens. TAL, Relevé 31, hypothèques, Airbnb — tout en un." data-en="The property management platform built for Canadian landlords. TAL, Relevé 31, mortgages, Airbnb — all in one.">La plateforme de gestion locative conçue pour les propriétaires canadiens. TAL, Relevé 31, hypothèques, Airbnb — tout en un.</p>
+      <h1 data-fr="La clé de votre gestion locative.<br><em>Simple. Transparent. Canadien.</em>" data-en="The key to your property management.<br><em>Simple. Transparent. Canadian.</em>">La clé de votre gestion locative.<br><em>Simple. Transparent. Canadien.</em></h1>
+      <p class="hero-sub" data-fr="La plateforme de gestion locative conçue pour les propriétaires canadiens. TAL 2026, Relevé 31, hypothèques, court terme — tout en un, sans frais cachés." data-en="The property management platform built for Canadian landlords. TAL 2026, Relevé 31, mortgages, short-term — all in one, no hidden fees.">La plateforme de gestion locative conçue pour les propriétaires canadiens. TAL 2026, Relevé 31, hypothèques, court terme — tout en un, sans frais cachés.</p>
       <div class="hero-cta">
-        <a href="https://app.unitly.ca/register" class="btn btn-dark btn-xl" data-fr="Commencer gratuitement →" data-en="Start for free →">Commencer gratuitement →</a>
+        <a href="https://app.kevly.ca/register" class="btn btn-dark btn-xl" data-fr="Commencer gratuitement →" data-en="Start for free →">Commencer gratuitement →</a>
         <button class="btn btn-ghost btn-lg" onclick="goPage('produit')" data-fr="Voir le produit" data-en="See the product">Voir le produit</button>
       </div>
       <p class="hero-note">
         <span data-fr="30 jours gratuits" data-en="30 days free">30 jours gratuits</span><span>·</span>
         <span data-fr="Aucune carte requise" data-en="No card required">Aucune carte requise</span><span>·</span>
-        <span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span>
+        <span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span><span>·</span>
+        <span data-fr="Zéro frais cachés" data-en="Zero hidden fees">Zéro frais cachés</span>
       </p>
       <div class="app-mock" style="padding:0;height:auto;display:block">
-        <img id="dashboard-img" src="screenshots/dashboard.png" style="width:100%;display:block;border-radius:var(--rl)" alt="Tableau de bord Unitly"/>
+        <img id="dashboard-img" src="screenshots/dashboard.png" style="width:100%;display:block;border-radius:var(--rl)" alt="Tableau de bord Kevly"/>
       </div>
     </div>
   </section>
@@ -441,21 +444,21 @@ footer{background:#070D1A;padding:64px 6% 36px}
   <!-- Problème → Solution -->
   <section class="section" style="background:var(--surface)">
     <div class="container">
-      <div class="section-tag" data-fr="Pourquoi Unitly" data-en="Why Unitly">Pourquoi Unitly</div>
+      <div class="section-tag" data-fr="Pourquoi Kevly" data-en="Why Kevly">Pourquoi Kevly</div>
       <h2 data-fr="Fini les outils disparates" data-en="No more separate tools">Fini les outils disparates</h2>
       <p class="lead" data-fr="Les propriétaires canadiens méritent mieux qu'un amalgame d'Excel, Word et post-its." data-en="Canadian landlords deserve better than a mix of Excel, Word and sticky notes.">Les propriétaires canadiens méritent mieux qu'un amalgame d'Excel, Word et post-its.</p>
       <div class="prob-grid">
         <div class="prob-card bad">
           <div class="prob-icon" style="background:var(--border);color:var(--sub)" data-fr="Avant" data-en="Before">Avant</div>
           <div>
-            <h3 style="color:var(--sub)" data-fr="Avant Unitly" data-en="Before Unitly">Avant Unitly</h3>
+            <h3 style="color:var(--sub)" data-fr="Avant Kevly" data-en="Before Kevly">Avant Kevly</h3>
             <p data-fr="4-5 outils différents, calcul TAL manuel, Relevé 31 à la main, risque d'erreurs, heures perdues chaque mois." data-en="4-5 different tools, manual TAL calculation, hand-written Relevé 31, risk of errors, hours lost every month.">4-5 outils différents, calcul TAL manuel, Relevé 31 à la main, risque d'erreurs, heures perdues chaque mois.</p>
           </div>
         </div>
         <div class="prob-card good">
           <div class="prob-icon" style="background:var(--blue);color:#fff" data-fr="Après" data-en="After">Après</div>
           <div>
-            <h3 style="color:var(--blue)" data-fr="Avec Unitly" data-en="With Unitly">Avec Unitly</h3>
+            <h3 style="color:var(--blue)" data-fr="Avec Kevly" data-en="With Kevly">Avec Kevly</h3>
             <p data-fr="Une plateforme de gestion locative complète — locataires, baux, loyers, maintenance, hypothèques et rapports fiscaux. Plus la conformité canadienne (TAL, Relevé 31) intégrée d'office." data-en="A complete property management platform — tenants, leases, rent, maintenance, mortgages and tax reports. Plus built-in Canadian compliance (TAL, Relevé 31) out of the box.">Une plateforme de gestion locative complète — locataires, baux, loyers, maintenance, hypothèques et rapports fiscaux. Plus la conformité canadienne (TAL, Relevé 31) intégrée d'office.</p>
           </div>
         </div>
@@ -464,20 +467,47 @@ footer{background:#070D1A;padding:64px 6% 36px}
   </section>
 
 
+  <!-- App mobile -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+        <div>
+          <div class="hero-badge" style="margin-bottom:20px">
+            <div class="hero-badge-dot"></div>
+            <span data-fr="Disponible maintenant" data-en="Available now">Disponible maintenant</span>
+          </div>
+          <h2 data-fr="Kevly Mobile — Gérez sur le terrain" data-en="Kevly Mobile — Manage on the go">Kevly Mobile — Gérez sur le terrain</h2>
+          <p class="lead" style="margin:14px 0 28px" data-fr="L'essentiel de la gestion locative dans votre poche." data-en="The essentials of property management in your pocket.">L'essentiel de la gestion locative dans votre poche.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px">
+            <div style="display:flex;gap:10px;font-size:14px;color:var(--sub)"><span>🏠</span><span data-fr="Tableau de bord — KPIs et alertes en un coup d'œil" data-en="Dashboard — KPIs and alerts at a glance">Tableau de bord — KPIs et alertes en un coup d'œil</span></div>
+            <div style="display:flex;gap:10px;font-size:14px;color:var(--sub)"><span>💰</span><span data-fr="Loyers — Marquez payé en un tap" data-en="Rent — Mark paid in one tap">Loyers — Marquez payé en un tap</span></div>
+            <div style="display:flex;gap:10px;font-size:14px;color:var(--sub)"><span>👥</span><span data-fr="Locataires — Fiche + appel direct" data-en="Tenants — Profile + direct call">Locataires — Fiche + appel direct</span></div>
+            <div style="display:flex;gap:10px;font-size:14px;color:var(--sub)"><span>🔧</span><span data-fr="Maintenance — Créez un ticket sur le terrain" data-en="Maintenance — Create a ticket on the go">Maintenance — Créez un ticket sur le terrain</span></div>
+            <div style="display:flex;gap:10px;font-size:14px;color:var(--sub)"><span>✉</span><span data-fr="Communications — 14 modèles pré-remplis" data-en="Communications — 14 pre-filled templates">Communications — 14 modèles pré-remplis</span></div>
+          </div>
+          <p style="font-size:13px;color:var(--dim)" data-fr="Inclus avec tous les plans — même abonnement, même compte." data-en="Included with all plans — same subscription, same account.">Inclus avec tous les plans — même abonnement, même compte.</p>
+        </div>
+        <div style="display:flex;justify-content:center">
+          <img src="/screenshots/mobile.png" alt="Kevly Mobile" style="max-width:260px;width:100%;border-radius:32px;box-shadow:0 40px 80px rgba(15,23,41,0.18)" onerror="this.style.display='none'"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Pour qui -->
   <section class="section" style="background:#fff">
     <div class="container" style="text-align:center">
       <div class="section-tag" data-fr="Pour qui ?" data-en="Who is it for?">Pour qui ?</div>
       <h2 data-fr="Conçu pour tous les propriétaires canadiens" data-en="Built for every Canadian landlord">Conçu pour tous les propriétaires canadiens</h2>
-      <p class="lead" style="margin:14px auto 52px;text-align:center" data-fr="Que vous ayez 1 ou 100 portes, Unitly s'adapte à votre réalité." data-en="Whether you have 1 or 100 units, Unitly adapts to your reality.">Que vous ayez 1 ou 100 portes, Unitly s'adapte à votre réalité.</p>
+      <p class="lead" style="margin:14px auto 52px;text-align:center" data-fr="Que vous ayez 1 ou 75 portes, Kevly s'adapte à votre réalité." data-en="Whether you have 1 or 75 units, Kevly adapts to your reality.">Que vous ayez 1 ou 75 portes, Kevly s'adapte à votre réalité.</p>
       <div class="pour-qui-grid">
 
         <div style="border:1px solid var(--border);border-radius:var(--rl);padding:32px;transition:all 0.25s;cursor:default" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,0.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
           <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-bottom:14px" data-fr="Petit propriétaire" data-en="Small landlord">Petit propriétaire</div>
-          <div style="font-size:22px;font-weight:800;letter-spacing:-0.6px;color:var(--navy);margin-bottom:10px" data-fr="1 à 4 portes" data-en="1 to 4 units">1 à 4 portes</div>
-          <p style="font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px" data-fr="Vous gérez votre immeuble en parallèle de votre vie professionnelle. Unitly remplace vos feuilles Excel et vous fait sauver des heures chaque mois." data-en="You manage your property alongside your professional life. Unitly replaces your Excel sheets and saves you hours every month.">Vous gérez votre immeuble en parallèle de votre vie professionnelle. Unitly remplace vos feuilles Excel et vous fait sauver des heures chaque mois.</p>
+          <div style="font-size:22px;font-weight:800;letter-spacing:-0.6px;color:var(--navy);margin-bottom:10px" data-fr="1 à 10 portes" data-en="1 to 10 units">1 à 10 portes</div>
+          <p style="font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px" data-fr="Vous gérez votre immeuble en parallèle de votre vie professionnelle. Kevly remplace vos feuilles Excel et vous fait sauver des heures chaque mois." data-en="You manage your property alongside your professional life. Kevly replaces your Excel sheets and saves you hours every month.">Vous gérez votre immeuble en parallèle de votre vie professionnelle. Kevly remplace vos feuilles Excel et vous fait sauver des heures chaque mois.</p>
           <div style="display:flex;flex-direction:column;gap:8px">
-            <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Plan Démarrage gratuit" data-en="Free Starter plan">Plan Démarrage gratuit</span></div>
+            <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Loyers, dépenses, maintenance inclus" data-en="Rent, expenses, maintenance included">Loyers, dépenses, maintenance inclus</span></div>
             <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="TAL et Relevé 31 automatiques" data-en="Automatic TAL and Relevé 31">TAL et Relevé 31 automatiques</span></div>
             <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Opérationnel en 30 minutes" data-en="Up and running in 30 minutes">Opérationnel en 30 minutes</span></div>
           </div>
@@ -485,9 +515,9 @@ footer{background:#070D1A;padding:64px 6% 36px}
 
         <div style="border:1.5px solid var(--blue);border-radius:var(--rl);padding:32px;background:var(--blue-light);transition:all 0.25s;cursor:default;position:relative" onmouseover="this.style.boxShadow='0 8px 28px rgba(59,91,219,0.15)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
           <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:700;padding:3px 14px;border-radius:20px;white-space:nowrap" data-fr="Le plus populaire" data-en="Most popular">Le plus populaire</div>
-          <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-bottom:14px" data-fr="Investisseur actif" data-en="Active investor">Investisseur actif</div>
-          <div style="font-size:22px;font-weight:800;letter-spacing:-0.6px;color:var(--navy);margin-bottom:10px" data-fr="5 à 25 portes" data-en="5 to 25 units">5 à 25 portes</div>
-          <p style="font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px" data-fr="Vous développez votre portefeuille activement. Unitly vous donne une vue financière complète, gère vos hypothèques et simplifie la relation avec votre comptable." data-en="You are actively growing your portfolio. Unitly gives you a complete financial view, manages your mortgages and simplifies the relationship with your accountant.">Vous développez votre portefeuille activement. Unitly vous donne une vue financière complète, gère vos hypothèques et simplifie la relation avec votre comptable.</p>
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-bottom:14px" data-fr="Propriétaire actif" data-en="Active landlord">Propriétaire actif</div>
+          <div style="font-size:22px;font-weight:800;letter-spacing:-0.6px;color:var(--navy);margin-bottom:10px" data-fr="11 à 25 portes" data-en="11 to 25 units">11 à 25 portes</div>
+          <p style="font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px" data-fr="Vous développez votre portefeuille activement. Kevly vous donne une vue financière complète, gère vos hypothèques et simplifie la relation avec votre comptable." data-en="You are actively growing your portfolio. Kevly gives you a complete financial view, manages your mortgages and simplifies the relationship with your accountant.">Vous développez votre portefeuille activement. Kevly vous donne une vue financière complète, gère vos hypothèques et simplifie la relation avec votre comptable.</p>
           <div style="display:flex;flex-direction:column;gap:8px">
             <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Rapports fiscaux pour comptable" data-en="Tax reports for accountant">Rapports fiscaux pour comptable</span></div>
             <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Comparateur d'hypothèques" data-en="Mortgage comparator">Comparateur d'hypothèques</span></div>
@@ -497,8 +527,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
 
         <div style="border:1px solid var(--border);border-radius:var(--rl);padding:32px;transition:all 0.25s;cursor:default" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,0.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
           <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-bottom:14px" data-fr="Grand portefeuille" data-en="Large portfolio">Grand portefeuille</div>
-          <div style="font-size:22px;font-weight:800;letter-spacing:-0.6px;color:var(--navy);margin-bottom:10px" data-fr="25 portes et plus" data-en="25+ units">25 portes et plus</div>
-          <p style="font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px" data-fr="Vous gérez plusieurs immeubles avec une équipe. Unitly centralise tout — plusieurs utilisateurs, accès comptable, Airbnb et gestion multi-propriétés." data-en="You manage multiple properties with a team. Unitly centralizes everything — multiple users, accountant access, Airbnb and multi-property management.">Vous gérez plusieurs immeubles avec une équipe. Unitly centralise tout — plusieurs utilisateurs, accès comptable, Airbnb et gestion multi-propriétés.</p>
+          <div style="font-size:22px;font-weight:800;letter-spacing:-0.6px;color:var(--navy);margin-bottom:10px" data-fr="26 à 75 portes" data-en="26 to 75 units">26 à 75 portes</div>
+          <p style="font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px" data-fr="Vous gérez plusieurs immeubles avec une équipe. Kevly centralise tout — plusieurs utilisateurs, accès comptable, Airbnb et gestion multi-propriétés." data-en="You manage multiple properties with a team. Kevly centralizes everything — multiple users, accountant access, Airbnb and multi-property management.">Vous gérez plusieurs immeubles avec une équipe. Kevly centralise tout — plusieurs utilisateurs, accès comptable, Airbnb et gestion multi-propriétés.</p>
           <div style="display:flex;flex-direction:column;gap:8px">
             <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Utilisateurs illimités" data-en="Unlimited users">Utilisateurs illimités</span></div>
             <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Airbnb + longue durée" data-en="Airbnb + long-term">Airbnb + longue durée</span></div>
@@ -528,7 +558,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
   <section class="section" style="background:var(--surface)">
     <div class="container" style="text-align:center">
       <div class="section-tag" data-fr="Témoignages" data-en="Testimonials">Témoignages</div>
-      <h2 data-fr="Ils font confiance à Unitly" data-en="They trust Unitly">Ils font confiance à Unitly</h2>
+      <h2 data-fr="Ils font confiance à Kevly" data-en="They trust Kevly">Ils font confiance à Kevly</h2>
       <div class="testi-grid">
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
@@ -548,7 +578,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
         </div>
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-q" data-fr="&ldquo;J'utilisais 4 outils différents avant. Maintenant tout est dans Unitly et mon comptable adore les rapports.&rdquo;" data-en="&ldquo;I used 4 different tools before. Now everything is in Unitly and my accountant loves the reports.&rdquo;">"J'utilisais 4 outils différents avant. Maintenant tout est dans Unitly et mon comptable adore les rapports."</p>
+          <p class="testi-q" data-fr="&ldquo;J'utilisais 4 outils différents avant. Maintenant tout est dans Kevly et mon comptable adore les rapports.&rdquo;" data-en="&ldquo;I used 4 different tools before. Now everything is in Kevly and my accountant loves the reports.&rdquo;">"J'utilisais 4 outils différents avant. Maintenant tout est dans Kevly et mon comptable adore les rapports."</p>
           <div class="testi-author">
             <div class="testi-av" style="background:var(--navy)">PT</div>
             <div><div class="testi-name">Pierre Tremblay</div><div class="testi-role" data-fr="32 portes · Laval" data-en="32 units · Laval">32 portes · Laval</div></div>
@@ -566,7 +596,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="faq-list">
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)"><span data-fr="Le calculateur TAL est-il officiel ?" data-en="Is the TAL calculator official?">Le calculateur TAL est-il officiel ?</span><span class="faq-q-icon">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner" data-fr="Oui — Unitly utilise les facteurs officiels publiés annuellement par le Tribunal administratif du logement du Québec. Taxes et assurances sont importées automatiquement depuis vos dépenses." data-en="Yes — Unitly uses the official factors published annually by Quebec's Tribunal administratif du logement. Taxes and insurance are automatically imported from your expenses.">Oui — Unitly utilise les facteurs officiels publiés annuellement par le Tribunal administratif du logement du Québec. Taxes et assurances sont importées automatiquement depuis vos dépenses.</div></div>
+          <div class="faq-a"><div class="faq-a-inner" data-fr="Oui — Kevly utilise les facteurs officiels publiés annuellement par le Tribunal administratif du logement du Québec. Taxes et assurances sont importées automatiquement depuis vos dépenses." data-en="Yes — Kevly uses the official factors published annually by Quebec's Tribunal administratif du logement. Taxes and insurance are automatically imported from your expenses.">Oui — Kevly utilise les facteurs officiels publiés annuellement par le Tribunal administratif du logement du Québec. Taxes et assurances sont importées automatiquement depuis vos dépenses.</div></div>
         </div>
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)"><span data-fr="Mes données sont-elles sécurisées ?" data-en="Is my data secure?">Mes données sont-elles sécurisées ?</span><span class="faq-q-icon">+</span></div>
@@ -586,7 +616,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
         </div>
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)"><span data-fr="Y a-t-il une app mobile ?" data-en="Is there a mobile app?">Y a-t-il une app mobile ?</span><span class="faq-q-icon">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner" data-fr="Le site est entièrement optimisé pour mobile et fonctionne parfaitement sur téléphone. Une app native iOS/Android est prévue pour 2025." data-en="The site is fully mobile-optimized and works perfectly on phone. A native iOS/Android app is planned for 2025.">Le site est entièrement optimisé pour mobile et fonctionne parfaitement sur téléphone. Une app native iOS/Android est prévue pour 2025.</div></div>
+          <div class="faq-a"><div class="faq-a-inner" data-fr="Kevly Mobile est disponible sur iOS et Android. Tableau de bord, loyers, locataires, maintenance et communications — optimisé pour la gestion sur le terrain. Inclus avec tous les plans, même compte." data-en="Kevly Mobile is available on iOS and Android. Dashboard, rent, tenants, maintenance and communications — optimized for on-site management. Included with all plans, same account.">Kevly Mobile est disponible sur iOS et Android. Tableau de bord, loyers, locataires, maintenance et communications — optimisé pour la gestion sur le terrain. Inclus avec tous les plans, même compte.</div></div>
         </div>
       </div>
     </div>
@@ -596,8 +626,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
   <section class="cta-final">
     <div class="container">
       <h2 data-fr="Prêt à simplifier votre gestion ?" data-en="Ready to simplify your management?">Prêt à simplifier votre gestion ?</h2>
-      <p data-fr="Rejoignez des propriétaires canadiens qui gèrent leur portefeuille avec Unitly." data-en="Join Canadian landlords managing their portfolio with Unitly.">Rejoignez des propriétaires canadiens qui gèrent leur portefeuille avec Unitly.</p>
-      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.unitly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
+      <p data-fr="Rejoignez les premiers propriétaires québécois sur Kevly — prix fondateurs disponibles maintenant." data-en="Join the first Quebec landlords on Kevly — founder pricing available now.">Rejoignez les premiers propriétaires québécois sur Kevly — prix fondateurs disponibles maintenant.</p>
+      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.kevly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
       <p class="cta-note"><span data-fr="Aucune carte requise" data-en="No card required">Aucune carte requise</span><span>·</span><span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span><span>·</span><span data-fr="Support bilingue" data-en="Bilingual support">Support bilingue</span></p>
     </div>
   </section>
@@ -643,8 +673,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <div class="pp-badge" data-fr="Exclusif Canada" data-en="Canada exclusive">Exclusif Canada</div>
       </div>
       <div class="pp-right">
-        <div class="pp-vt" data-fr="Calcul TAL — 2024" data-en="TAL Calculation — 2024">Calcul TAL — 2024</div>
-        <div class="v-row"><span class="v-k" data-fr="Taxes municipales" data-en="Municipal taxes">Taxes municipales</span><span class="v-p">+3.7%</span></div>
+        <div class="pp-vt" data-fr="Calcul TAL — 2026" data-en="TAL Calculation — 2026">Calcul TAL — 2026</div>
+        <div class="v-row"><span class="v-k" data-fr="Taxes municipales" data-en="Municipal taxes">Taxes municipales</span><span class="v-p">+3.1%</span></div>
         <div class="v-row"><span class="v-k" data-fr="Assurances" data-en="Insurance">Assurances</span><span class="v-p">+4.9%</span></div>
         <div class="v-row"><span class="v-k" data-fr="Chauffage" data-en="Heating">Chauffage</span><span class="v-p">+4.7%</span></div>
         <div class="v-row"><span class="v-k" data-fr="Entretien" data-en="Maintenance">Entretien</span><span class="v-p">+6.7%</span></div>
@@ -812,12 +842,12 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="prod-pane" id="pt-comms">
       <div class="pp-left">
         <h3 data-fr="Communications" data-en="Communications">Communications</h3>
-        <p data-fr="Envoyez des emails professionnels à vos locataires directement depuis Unitly — rappels de loyer, avis d'inspection, renouvellements. 14 modèles prêts à l'emploi, envoi en masse en BCC." data-en="Send professional emails to your tenants directly from Unitly — rent reminders, inspection notices, renewals. 14 ready-made templates, bulk BCC sending.">Envoyez des emails professionnels à vos locataires directement depuis Unitly — rappels de loyer, avis d'inspection, renouvellements. 14 modèles prêts à l'emploi, envoi en masse en BCC.</p>
+        <p data-fr="Envoyez des courriels professionnels à vos locataires — rappels de loyer, avis d'inspection, renouvellements. 14 modèles pré-remplis, envoi en masse en BCC." data-en="Send professional emails to your tenants — rent reminders, inspection notices, renewals. 14 pre-filled templates, bulk BCC sending.">Envoyez des courriels professionnels à vos locataires — rappels de loyer, avis d'inspection, renouvellements. 14 modèles pré-remplis, envoi en masse en BCC.</p>
         <div class="pp-pts">
           <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="14 modèles prêts — rappel loyer, mise en demeure, avis TAL…" data-en="14 ready templates — rent reminder, formal notice, TAL notice…">14 modèles prêts — rappel loyer, mise en demeure, avis TAL…</span></div>
           <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Envoi en masse en BCC — les locataires ne se voient pas" data-en="Bulk BCC sending — tenants don't see each other">Envoi en masse en BCC — les locataires ne se voient pas</span></div>
           <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Filtres par immeuble et statut (actifs seulement)" data-en="Filter by building and status (active only)">Filtres par immeuble et statut (actifs seulement)</span></div>
-          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Ouvre directement dans votre client email" data-en="Opens directly in your email client">Ouvre directement dans votre client email</span></div>
+          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Avis officiels québécois pré-remplis depuis vos données" data-en="Official Quebec notices pre-filled from your data">Avis officiels québécois pré-remplis depuis vos données</span></div>
         </div>
         <div class="pp-badge" data-fr="Nouveau" data-en="New">Nouveau</div>
       </div>
@@ -855,7 +885,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <div class="how-step reveal reveal-d1">
           <div class="how-num">2</div>
           <div class="how-title" data-fr="Ajoutez vos immeubles" data-en="Add your properties">Ajoutez vos immeubles</div>
-          <p class="how-desc" data-fr="Entrez vos propriétés, logements et baux. Unitly génère automatiquement le suivi des loyers, les alertes et le calendrier hypothécaire." data-en="Enter your properties, units and leases. Unitly automatically generates rent tracking, alerts and your mortgage schedule.">Entrez vos propriétés, logements et baux. Unitly génère automatiquement le suivi des loyers, les alertes et le calendrier hypothécaire.</p>
+          <p class="how-desc" data-fr="Entrez vos propriétés, logements et baux. Kevly génère automatiquement le suivi des loyers, les alertes et le calendrier hypothécaire." data-en="Enter your properties, units and leases. Kevly automatically generates rent tracking, alerts and your mortgage schedule.">Entrez vos propriétés, logements et baux. Kevly génère automatiquement le suivi des loyers, les alertes et le calendrier hypothécaire.</p>
         </div>
         <div class="how-step reveal reveal-d2">
           <div class="how-num">3</div>
@@ -869,8 +899,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
   <section class="cta-final">
     <div class="container">
       <h2 data-fr="Prêt à essayer ?" data-en="Ready to try?">Prêt à essayer ?</h2>
-      <p data-fr="Rejoignez des propriétaires canadiens qui gèrent leur portefeuille avec Unitly." data-en="Join Canadian landlords managing their portfolio with Unitly.">Rejoignez des propriétaires canadiens qui gèrent leur portefeuille avec Unitly.</p>
-      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.unitly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
+      <p data-fr="Rejoignez des propriétaires canadiens qui gèrent leur portefeuille avec Kevly." data-en="Join Canadian landlords managing their portfolio with Kevly.">Rejoignez des propriétaires canadiens qui gèrent leur portefeuille avec Kevly.</p>
+      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.kevly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
       <p class="cta-note"><span data-fr="Aucune carte requise" data-en="No card required">Aucune carte requise</span><span>·</span><span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span></p>
     </div>
   </section>
@@ -899,64 +929,68 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="plans-grid">
       <div class="plan-card">
         <div class="plan-tier" data-fr="Démarrage" data-en="Starter">Démarrage</div>
-        <div class="plan-price">0 $</div>
-        <div class="plan-limit" data-fr="4 portes · Québec seulement" data-en="4 units · Quebec only">4 portes · Québec seulement</div>
+        <div class="plan-price" id="prix-p0">14 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
+        <div class="plan-limit" data-fr="1 à 10 portes · QC + ON + AB" data-en="1 to 10 units · QC + ON + AB">1 à 10 portes · QC + ON + AB</div>
         <div class="plan-feats">
-          <div class="pf"><span class="pfy">✓</span><span data-fr="1 immeuble, 4 logements" data-en="1 property, 4 units">1 immeuble, 4 logements</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Suivi des loyers" data-en="Rent tracking">Suivi des loyers</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Locataires & baux" data-en="Tenants & leases">Locataires & baux</span></div>
-          <div class="pf"><span class="pfn">✗</span><span data-fr="TAL & Relevé 31" data-en="TAL & Relevé 31">TAL & Relevé 31</span></div>
+          <div class="pf"><span class="pfy">✓</span><span data-fr="TAL & Relevé 31" data-en="TAL & Relevé 31">TAL & Relevé 31</span></div>
+          <div class="pf"><span class="pfy">✓</span><span data-fr="Dépenses & maintenance" data-en="Expenses & maintenance">Dépenses & maintenance</span></div>
+          <div class="pf"><span class="pfn">✗</span><span data-fr="Communications locataires" data-en="Tenant communications">Communications locataires</span></div>
           <div class="pf"><span class="pfn">✗</span><span data-fr="Hypothèques" data-en="Mortgages">Hypothèques</span></div>
-          <div class="pf"><span class="pfn">✗</span><span data-fr="Rapports avancés" data-en="Advanced reports">Rapports avancés</span></div>
         </div>
-        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.unitly.ca/register'" data-fr="Commencer gratuitement" data-en="Start free">Commencer gratuitement</button>
+        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
       <div class="plan-card pop">
         <div class="pop-badge" data-fr="Le plus populaire" data-en="Most popular">Le plus populaire</div>
         <div class="plan-tier" data-fr="Propriétaire" data-en="Landlord">Propriétaire</div>
-        <div class="plan-price" id="prix-p1">19 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
-        <div class="plan-limit" data-fr="25 portes · QC + ON + AB" data-en="25 units · QC + ON + AB">25 portes · QC + ON + AB</div>
+        <div class="plan-price" id="prix-p1">29 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
+        <div class="plan-limit" data-fr="11 à 25 portes · QC + ON + AB" data-en="11 to 25 units · QC + ON + AB">11 à 25 portes · QC + ON + AB</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Tout du Démarrage" data-en="Everything in Starter">Tout du Démarrage</span></div>
-          <div class="pf"><span class="pfy">✓</span><span data-fr="TAL & Relevé 31" data-en="TAL & Relevé 31">TAL & Relevé 31</span></div>
-          <div class="pf"><span class="pfy">✓</span><span data-fr="Hypothèques complètes" data-en="Full mortgages">Hypothèques complètes</span></div>
-          <div class="pf"><span class="pfy">✓</span><span data-fr="Dépenses & fournisseurs" data-en="Expenses & suppliers">Dépenses & fournisseurs</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Communications locataires" data-en="Tenant communications">Communications locataires</span></div>
+          <div class="pf"><span class="pfy">✓</span><span data-fr="Hypothèques complètes" data-en="Full mortgages">Hypothèques complètes</span></div>
+          <div class="pf"><span class="pfy">✓</span><span data-fr="Rapports & projections" data-en="Reports & projections">Rapports & projections</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="2 utilisateurs" data-en="2 users">2 utilisateurs</span></div>
-          <div class="pf"><span class="pfn">✗</span><span>Airbnb</span></div>
+          <div class="pf"><span class="pfn">✗</span><span data-fr="Court terme / Airbnb" data-en="Short-term / Airbnb">Court terme / Airbnb</span></div>
         </div>
-        <button class="plan-btn plan-btn-dark" onclick="window.location='https://app.unitly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
+        <button class="plan-btn plan-btn-dark" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
       <div class="plan-card">
         <div class="plan-tier" data-fr="Investisseur" data-en="Investor">Investisseur</div>
-        <div class="plan-price" id="prix-p2">34 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
-        <div class="plan-limit" data-fr="100 portes · Canada complet" data-en="100 units · All of Canada">100 portes · Canada complet</div>
+        <div class="plan-price" id="prix-p2">39 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
+        <div class="plan-limit" data-fr="26 à 40 portes · Canada complet" data-en="26 to 40 units · All of Canada">26 à 40 portes · Canada complet</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Tout du Propriétaire" data-en="Everything in Landlord">Tout du Propriétaire</span></div>
-          <div class="pf"><span class="pfy">✓</span><span data-fr="Airbnb / court terme" data-en="Airbnb / short-term">Airbnb / court terme</span></div>
-          <div class="pf"><span class="pfy">✓</span><span data-fr="Projections avancées" data-en="Advanced projections">Projections avancées</span></div>
+          <div class="pf"><span class="pfy">✓</span><span data-fr="Court terme / Airbnb" data-en="Short-term / Airbnb">Court terme / Airbnb</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Rapport fiscal comptable" data-en="Accountant tax report">Rapport fiscal comptable</span></div>
+          <div class="pf"><span class="pfy">✓</span><span data-fr="Projections avancées" data-en="Advanced projections">Projections avancées</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="5 utilisateurs" data-en="5 users">5 utilisateurs</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="1 accès comptable inclus" data-en="1 accountant access included">1 accès comptable inclus</span></div>
         </div>
-        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.unitly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
+        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
       <div class="plan-card">
         <div class="plan-tier" data-fr="Portefeuille" data-en="Portfolio">Portefeuille</div>
         <div class="plan-price" id="prix-p3">59 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
-        <div class="plan-limit" data-fr="Illimité · Canada complet" data-en="Unlimited · All of Canada">Illimité · Canada complet</div>
+        <div class="plan-limit" data-fr="41 à 75 portes · Canada complet" data-en="41 to 75 units · All of Canada">41 à 75 portes · Canada complet</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Tout de l'Investisseur" data-en="Everything in Investor">Tout de l'Investisseur</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Utilisateurs illimités" data-en="Unlimited users">Utilisateurs illimités</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Accès comptable illimité" data-en="Unlimited accountant access">Accès comptable illimité</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Journal d'activité complet" data-en="Full activity log">Journal d'activité complet</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Support prioritaire" data-en="Priority support">Support prioritaire</span></div>
-          <div class="pf"><span class="pfy">✓</span><span data-fr="Onboarding personnalisé" data-en="Personalized onboarding">Onboarding personnalisé</span></div>
+          <div class="pf"><span class="pfy">✓</span><span data-fr="SMS add-on disponible" data-en="SMS add-on available">SMS add-on disponible</span></div>
         </div>
-        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.unitly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
+        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
     </div>
-    <p class="prix-note" data-fr="Tous les prix en CAD · Annulez en tout temps · Add-ons : comptable +5$/mois, portes supp. +2$/porte/mois" data-en="All prices in CAD · Cancel anytime · Add-ons: accountant +$5/mo, extra units +$2/unit/mo">Tous les prix en CAD · Annulez en tout temps · Add-ons : comptable +5$/mois, portes supp. +2$/porte/mois</p>
+    <div style="text-align:center;margin-top:28px;padding:20px;background:var(--surface);border-radius:12px;border:1px solid var(--border)">
+      <div style="font-weight:700;color:var(--navy);margin-bottom:6px" data-fr="Plus de 75 portes ?" data-en="More than 75 units?">Plus de 75 portes ?</div>
+      <div style="color:var(--sub);font-size:14px;margin-bottom:14px" data-fr="Contactez-nous pour un plan sur mesure." data-en="Contact us for a custom plan.">Contactez-nous pour un plan sur mesure.</div>
+      <a href="mailto:info@kevly.ca" style="background:var(--navy);color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600">info@kevly.ca</a>
+    </div>
+    <p class="prix-note" data-fr="Tous les prix en CAD · Essai 30 jours gratuit · Aucune carte requise · Annulez en tout temps" data-en="All prices in CAD · 30-day free trial · No card required · Cancel anytime">Tous les prix en CAD · Essai 30 jours gratuit · Aucune carte requise · Annulez en tout temps</p>
   </div>
 
   <!-- FAQ Tarifs -->
@@ -985,7 +1019,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="container" style="display:flex;flex-direction:column;align-items:center">
       <h2 data-fr="Commencez gratuitement aujourd'hui" data-en="Start free today">Commencez gratuitement aujourd'hui</h2>
       <p data-fr="Tout ce dont vous avez besoin pour gérer votre portefeuille." data-en="Everything you need to manage your portfolio.">Tout ce dont vous avez besoin pour gérer votre portefeuille.</p>
-      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.unitly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
+      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.kevly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
       <p class="cta-note"><span data-fr="Aucune carte requise" data-en="No card required">Aucune carte requise</span><span>·</span><span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span><span>·</span><span data-fr="Support bilingue" data-en="Bilingual support">Support bilingue</span></p>
     </div>
   </section>
@@ -1030,19 +1064,19 @@ footer{background:#070D1A;padding:64px 6% 36px}
             </div>
             <button type="submit" id="contact-submit" class="btn btn-dark" style="width:100%;justify-content:center;padding:14px;font-size:15px;border-radius:var(--rl)" data-fr="Envoyer le message" data-en="Send message">Envoyer le message</button>
             <div id="form-success" style="display:none;background:var(--green-light);border:1px solid var(--green);border-radius:var(--r);padding:14px 16px;font-size:14px;color:var(--green);font-weight:600" data-fr="Message envoyé ! On vous répond en moins de 24h." data-en="Message sent! We'll reply within 24 hours.">Message envoyé ! On vous répond en moins de 24h.</div>
-            <div id="form-error" style="display:none;background:#FEF2F2;border:1px solid #FECACA;border-radius:var(--r);padding:14px 16px;font-size:14px;color:#DC2626;font-weight:600" data-fr="Une erreur est survenue. Écrivez-nous directement à support@unitly.ca" data-en="An error occurred. Email us directly at support@unitly.ca">Une erreur est survenue. Écrivez-nous directement à support@unitly.ca</div>
+            <div id="form-error" style="display:none;background:#FEF2F2;border:1px solid #FECACA;border-radius:var(--r);padding:14px 16px;font-size:14px;color:#DC2626;font-weight:600" data-fr="Une erreur est survenue. Écrivez-nous directement à support@kevly.ca" data-en="An error occurred. Email us directly at support@kevly.ca">Une erreur est survenue. Écrivez-nous directement à support@kevly.ca</div>
           </form>
         </div>
         <!-- Infos contact -->
         <div style="display:flex;flex-direction:column;gap:20px">
           <div style="border:1px solid var(--border);border-radius:var(--rl);padding:28px;background:#fff">
             <div style="font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--dim);margin-bottom:14px" data-fr="Support" data-en="Support">Support</div>
-            <div style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px">support@unitly.ca</div>
+            <div style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px">support@kevly.ca</div>
             <div style="font-size:13px;color:var(--sub)" data-fr="Réponse en moins de 24h · FR & EN" data-en="Response within 24h · FR & EN">Réponse en moins de 24h · FR & EN</div>
           </div>
           <div style="border:1px solid var(--border);border-radius:var(--rl);padding:28px;background:#fff">
             <div style="font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--dim);margin-bottom:14px" data-fr="Général" data-en="General">Général</div>
-            <div style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px">info@unitly.ca</div>
+            <div style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:4px">info@kevly.ca</div>
             <div style="font-size:13px;color:var(--sub)" data-fr="Partenariats, presse, facturation" data-en="Partnerships, press, billing">Partenariats, presse, facturation</div>
           </div>
           <div style="border:1px solid var(--border);border-radius:var(--rl);padding:28px;background:var(--surface)">
@@ -1077,16 +1111,16 @@ footer{background:#070D1A;padding:64px 6% 36px}
               <rect x="9" y="9" width="6" height="6" rx="1.5" fill="white" opacity="0.35"/>
             </svg>
           </div>
-          <span class="footer-logo-text">unitly</span>
+          <span class="footer-logo-text" style="letter-spacing:0.06em">KEVLY</span>
         </div>
-        <p class="footer-desc" data-fr="Gestion locative simplifiée pour les propriétaires canadiens. Fait au Canada." data-en="Simplified property management for Canadian landlords. Made in Canada.">Gestion locative simplifiée pour les propriétaires canadiens. Fait au Canada.</p>
+        <p class="footer-desc" data-fr="La clé de votre gestion locative. Conçu pour les propriétaires québécois. Fait au Canada." data-en="The key to your property management. Built for Quebec landlords. Made in Canada.">La clé de votre gestion locative. Conçu pour les propriétaires québécois. Fait au Canada.</p>
       </div>
       <div class="footer-col">
         <h4 data-fr="Produit" data-en="Product">Produit</h4>
         <a href="#" onclick="goPage('produit');return false" data-fr="Fonctionnalités" data-en="Features">Fonctionnalités</a>
         <a href="#" onclick="goPage('tarifs');return false" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
-        <a href="https://app.unitly.ca" data-fr="Se connecter" data-en="Login">Se connecter</a>
-        <a href="https://app.unitly.ca/register" data-fr="Essai gratuit" data-en="Free trial">Essai gratuit</a>
+        <a href="https://app.kevly.ca" data-fr="Se connecter" data-en="Login">Se connecter</a>
+        <a href="https://app.kevly.ca/register" data-fr="Essai gratuit" data-en="Free trial">Essai gratuit</a>
       </div>
       <div class="footer-col">
         <h4 data-fr="Légal" data-en="Legal">Légal</h4>
@@ -1098,13 +1132,13 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="footer-col">
         <h4 data-fr="Entreprise" data-en="Company">Entreprise</h4>
         <a href="#" onclick="goPage('contact');return false" data-fr="Contact" data-en="Contact">Contact</a>
-        <a href="mailto:support@unitly.ca">support@unitly.ca</a>
-        <a href="mailto:info@unitly.ca">info@unitly.ca</a>
+        <a href="mailto:support@kevly.ca">support@kevly.ca</a>
+        <a href="mailto:info@kevly.ca">info@kevly.ca</a>
         <a href="#" data-fr="Blog" data-en="Blog">Blog</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span data-fr="© 2024 Unitly Inc. Tous droits réservés." data-en="© 2024 Unitly Inc. All rights reserved.">© 2024 Unitly Inc. Tous droits réservés.</span>
+      <span data-fr="© 2026 Kevly Inc. Tous droits réservés." data-en="© 2026 Kevly Inc. All rights reserved.">© 2026 Kevly Inc. Tous droits réservés.</span>
       <div class="footer-canada" data-fr="Données hébergées au Canada" data-en="Data hosted in Canada">Données hébergées au Canada</div>
     </div>
   </div>
@@ -1131,7 +1165,7 @@ function toggleLang() {
       el.textContent = txt;
     }
   });
-  if(cookieText){cookieText.textContent = lang==='fr' ? 'Unitly utilise des cookies pour améliorer votre expérience et analyser notre trafic. Vos données restent au Canada.' : 'Unitly uses cookies to improve your experience and analyze our traffic. Your data stays in Canada.';}
+  if(cookieText){cookieText.textContent = lang==='fr' ? 'Kevly utilise des cookies pour améliorer votre expérience et analyser notre trafic. Vos données restent au Canada.' : 'Kevly uses cookies to improve your experience and analyze our traffic. Your data stays in Canada.';}
   if(cookieAccept){cookieAccept.textContent = lang==='fr' ? 'Accepter' : 'Accept';}
   if(cookieDecline){cookieDecline.textContent = lang==='fr' ? 'Refuser' : 'Decline';}
   document.querySelectorAll('[data-fr-placeholder]').forEach(el => {
@@ -1186,8 +1220,8 @@ function goTab(id, btn) {
 // ── TARIFS TOGGLE ──
 let pricingMode = 'm';
 const PRICES = {
-  m: {p1:'19 $', p2:'34 $', p3:'59 $'},
-  a: {p1:'16 $', p2:'28 $', p3:'49 $'}
+  m: {p0:'14 $', p1:'29 $', p2:'39 $', p3:'59 $'},
+  a: {p0:'12 $', p1:'24 $', p2:'32 $', p3:'49 $'}
 };
 function setTog(mode) {
   pricingMode = mode;
@@ -1195,7 +1229,7 @@ function setTog(mode) {
   document.getElementById('tog-a').classList.toggle('active', mode === 'a');
   const p = PRICES[mode];
   const suf = lang === 'fr' ? '/mois' : '/mo';
-  ['p1','p2','p3'].forEach(k => {
+  ['p0','p1','p2','p3'].forEach(k => {
     const el = document.getElementById('prix-' + k);
     if (el) el.innerHTML = p[k] + '<sub>' + suf + '</sub>';
   });
@@ -1262,16 +1296,16 @@ initReveals();
 
 <!-- Cookie Banner -->
 <div id="cookie-banner" style="position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:999;background:var(--navy);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);padding:18px 24px;display:flex;align-items:center;gap:20px;box-shadow:0 8px 32px rgba(0,0,0,0.3);max-width:680px;width:calc(100% - 48px);animation:slideUp 0.4s cubic-bezier(0.4,0,0.2,1)">
-  <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;flex:1;margin:0" id="cookie-text" data-fr="Unitly utilise des cookies pour améliorer votre expérience et analyser notre trafic. Vos données restent au Canada." data-en="Unitly uses cookies to improve your experience and analyze our traffic. Your data stays in Canada.">Unitly utilise des cookies pour améliorer votre expérience et analyser notre trafic. Vos données restent au Canada.</p>
+  <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;flex:1;margin:0" id="cookie-text" data-fr="Kevly utilise des cookies pour améliorer votre expérience et analyser notre trafic. Vos données restent au Canada." data-en="Kevly uses cookies to improve your experience and analyze our traffic. Your data stays in Canada.">Kevly utilise des cookies pour améliorer votre expérience et analyser notre trafic. Vos données restent au Canada.</p>
   <div style="display:flex;gap:10px;flex-shrink:0">
     <button onclick="dismissCookie()" style="background:transparent;border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.5);cursor:pointer;font-family:inherit;transition:all 0.15s;white-space:nowrap" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'" id="cookie-decline" data-fr="Refuser" data-en="Decline">Refuser</button>
     <button onclick="acceptCookie()" style="background:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer;font-family:inherit;transition:all 0.15s;white-space:nowrap" onmouseover="this.style.background='#e8ecf4'" onmouseout="this.style.background='#fff'" id="cookie-accept" data-fr="Accepter" data-en="Accept">Accepter</button>
   </div>
 </div>
 <script>
-function acceptCookie(){localStorage.setItem('unitly-cookies','accepted');document.getElementById('cookie-banner').style.display='none'}
-function dismissCookie(){localStorage.setItem('unitly-cookies','declined');document.getElementById('cookie-banner').style.display='none'}
-if(localStorage.getItem('unitly-cookies')){document.getElementById('cookie-banner').style.display='none'}
+function acceptCookie(){localStorage.setItem('kevly-cookies','accepted');document.getElementById('cookie-banner').style.display='none'}
+function dismissCookie(){localStorage.setItem('kevly-cookies','declined');document.getElementById('cookie-banner').style.display='none'}
+if(localStorage.getItem('kevly-cookies')){document.getElementById('cookie-banner').style.display='none'}
 </script>
 </body>
 </html>
