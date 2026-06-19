@@ -66,7 +66,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
 /* ══════════════════════════════
    PAGE ACCUEIL
 ══════════════════════════════ */
-.hero{padding:100px 6% 80px;background:linear-gradient(180deg,#fff 0%,var(--surface) 100%);position:relative;overflow:hidden}
+.hero{padding:80px 6% 56px;background:linear-gradient(180deg,#fff 0%,var(--surface) 100%);position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-300px;left:50%;transform:translateX(-50%);width:1000px;height:700px;background:radial-gradient(ellipse,rgba(59,91,219,0.05) 0%,transparent 65%);pointer-events:none}
 .hero-inner{max-width:1140px;margin:0 auto}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:30px;padding:7px 16px;font-size:13px;font-weight:600;color:var(--sub);margin-bottom:28px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
@@ -78,7 +78,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
 .btn-xl{padding:16px 34px;font-size:16px;border-radius:var(--rl);letter-spacing:-0.3px}
 .btn-lg{padding:14px 28px;font-size:15px;border-radius:var(--rl)}
-.hero-note{font-size:13px;color:var(--dim);margin-bottom:64px}
+.hero-note{font-size:13px;color:var(--dim);margin-bottom:44px}
 .hero-note span{margin:0 8px;opacity:0.4}
 
 /* Dashboard preview */
@@ -122,13 +122,13 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
 .trust-sep{width:3px;height:3px;border-radius:50%;background:var(--border)}
 
 /* Sections */
-.section{padding:96px 6%}
+.section{padding:68px 6%}
 .section-tag{display:inline-block;background:var(--blue-light);color:var(--blue);border-radius:30px;padding:5px 14px;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:18px}
 h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing:-1.2px;color:var(--navy)}
 .lead{font-size:17px;color:var(--sub);line-height:1.75;letter-spacing:-0.2px;margin-top:14px;max-width:520px}
 
 /* Comment ça marche */
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;max-width:860px;margin-left:auto;margin-right:auto;position:relative}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;max-width:860px;margin-left:auto;margin-right:auto;position:relative}
 .how-grid::before{content:'';position:absolute;top:25px;left:calc(33.33% / 2 + 26px);right:calc(33.33% / 2 + 26px);height:1px;background:var(--border);z-index:0}
 .how-step{text-align:center;padding:0 28px}
 .how-num{width:52px;height:52px;border-radius:14px;background:var(--blue);color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;letter-spacing:-0.5px;position:relative;z-index:1;box-shadow:0 4px 16px rgba(59,91,219,0.25)}
@@ -136,7 +136,7 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .how-desc{font-size:13px;color:var(--sub);line-height:1.75}
 
 /* Problème → Solution */
-.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px}
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
 .prob-card{padding:28px;border-radius:var(--rl);border:1px solid var(--border);display:flex;gap:18px}
 .prob-card.bad{border-left:3px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.04)}
 .prob-card.good{border-left:3px solid var(--blue);background:var(--blue-light)}
@@ -145,14 +145,14 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .prob-card p{font-size:13px;color:var(--sub);line-height:1.65}
 
 /* Stats */
-.stats-section{background:var(--navy);padding:96px 6%;text-align:center}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:52px;max-width:1140px;margin-left:auto;margin-right:auto}
+.stats-section{background:var(--navy);padding:68px 6%;text-align:center}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:36px;max-width:1140px;margin-left:auto;margin-right:auto}
 .stat-num{font-size:56px;font-weight:800;letter-spacing:-2px;color:#fff;line-height:1}
 .stat-num em{font-style:normal;color:var(--blue);font-size:38px}
 .stat-lbl{font-size:14px;color:rgba(255,255,255,0.4);margin-top:8px;font-weight:500}
 
 /* Témoignages */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
 .testi-card{border:1px solid var(--border);border-radius:var(--rl);padding:28px;transition:box-shadow 0.25s,transform 0.25s;background:#fff}
 .testi-card:hover{box-shadow:0 8px 28px rgba(0,0,0,0.07);transform:translateY(-2px)}
 .testi-stars{letter-spacing:3px;color:#F59E0B;margin-bottom:14px;font-size:13px}
@@ -163,7 +163,7 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .testi-role{font-size:12px;color:var(--dim);margin-top:1px}
 
 /* FAQ */
-.faq-list{max-width:780px;margin:52px auto 0;display:flex;flex-direction:column;gap:8px}
+.faq-list{max-width:780px;margin:36px auto 0;display:flex;flex-direction:column;gap:8px}
 .faq-item{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color 0.2s}
 .faq-item.open{border-color:var(--blue)}
 .faq-q{padding:20px 24px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;letter-spacing:-0.2px;transition:background 0.15s;user-select:none}
@@ -175,7 +175,7 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .faq-a-inner{padding:0 24px 20px;font-size:14px;color:var(--sub);line-height:1.75}
 
 /* CTA Final */
-.cta-final{background:var(--navy);text-align:center;padding:96px 6%;position:relative;overflow:hidden}
+.cta-final{background:var(--navy);text-align:center;padding:72px 6%;position:relative;overflow:hidden}
 .cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(59,91,219,0.25) 0%,transparent 70%);pointer-events:none}
 .cta-final h2{color:#fff;max-width:680px;margin:0 auto 18px;position:relative}
 .cta-final p{color:rgba(255,255,255,0.5);font-size:18px;max-width:480px;margin:0 auto 20px;position:relative;letter-spacing:-0.2px}
@@ -408,7 +408,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <span data-fr="Nouveau — App mobile + 14 modèles de communication inclus" data-en="New — Mobile app + 14 communication templates included">Nouveau — App mobile + 14 modèles de communication inclus</span>
       </div>
       <h1 data-fr="La clé de votre gestion locative.<br><em>Simple. Transparent. Québécois.</em>" data-en="The key to your property management.<br><em>Simple. Transparent. Made for Quebec.</em>">La clé de votre gestion locative.<br><em>Simple. Transparent. Québécois.</em></h1>
-      <p class="hero-sub" data-fr="La plateforme de gestion locative conçue pour les propriétaires québécois. Calculateur TAL 2026, hypothèques, court terme, Airbnb — tout en un, sans frais cachés." data-en="The property management platform built for Quebec landlords. TAL calculator 2026, mortgages, short-term, Airbnb — all in one, no hidden fees.">La plateforme de gestion locative conçue pour les propriétaires québécois. Calculateur TAL 2026, hypothèques, court terme, Airbnb — tout en un, sans frais cachés.</p>
+      <p class="hero-sub" data-fr="La plateforme de gestion locative conçue pour les propriétaires québécois. Calculateur TAL 2026, loyers, maintenance, hypothèques — tout en un, sans frais cachés." data-en="The property management platform built for Quebec landlords. TAL calculator 2026, rent, maintenance, mortgages — all in one, no hidden fees.">La plateforme de gestion locative conçue pour les propriétaires québécois. Calculateur TAL 2026, loyers, maintenance, hypothèques — tout en un, sans frais cachés.</p>
       <div class="hero-cta">
         <a href="https://app.kevly.ca/register" class="btn btn-dark btn-xl" data-fr="Commencer gratuitement →" data-en="Start for free →">Commencer gratuitement →</a>
         <button class="btn btn-ghost btn-lg" onclick="goPage('produit')" data-fr="Voir le produit" data-en="See the product">Voir le produit</button>
@@ -469,7 +469,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
   <!-- App mobile -->
   <section class="section" style="background:#fff">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
         <div>
           <div class="hero-badge" style="margin-bottom:20px">
             <div class="hero-badge-dot"></div>
@@ -487,7 +487,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <p style="font-size:13px;color:var(--dim)" data-fr="Inclus avec tous les plans — même abonnement, même compte." data-en="Included with all plans — same subscription, same account.">Inclus avec tous les plans — même abonnement, même compte.</p>
         </div>
         <div style="display:flex;justify-content:center">
-          <img src="/screenshots/mobile.png" alt="Kevly Mobile" style="max-width:260px;width:100%;border-radius:32px;box-shadow:0 40px 80px rgba(15,23,41,0.18)" onerror="this.parentElement.style.display='none'"/>
+          <img src="screenshots/loyers.png" alt="Kevly — suivi des loyers" style="max-width:520px;width:100%;border-radius:14px;box-shadow:0 24px 56px rgba(15,23,41,0.16),0 0 0 1px rgba(15,23,41,0.08)"/>
         </div>
       </div>
     </div>
@@ -498,7 +498,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="container" style="text-align:center">
       <div class="section-tag" data-fr="Pour qui ?" data-en="Who is it for?">Pour qui ?</div>
       <h2 data-fr="Conçu pour tous les propriétaires québécois" data-en="Built for every Quebec landlord">Conçu pour tous les propriétaires québécois</h2>
-      <p class="lead" style="margin:14px auto 52px;text-align:center" data-fr="Que vous ayez 1 ou 75 portes, Kevly s'adapte à votre réalité." data-en="Whether you have 1 or 75 units, Kevly adapts to your reality.">Que vous ayez 1 ou 75 portes, Kevly s'adapte à votre réalité.</p>
+      <p class="lead" style="margin:14px auto 36px;text-align:center" data-fr="Que vous ayez 1 ou 75 portes, Kevly s'adapte à votre réalité." data-en="Whether you have 1 or 75 units, Kevly adapts to your reality.">Que vous ayez 1 ou 75 portes, Kevly s'adapte à votre réalité.</p>
       <div class="pour-qui-grid">
 
         <div style="border:1px solid var(--border);border-radius:var(--rl);padding:32px;transition:all 0.25s;cursor:default" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,0.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
@@ -527,10 +527,10 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <div style="border:1px solid var(--border);border-radius:var(--rl);padding:32px;transition:all 0.25s;cursor:default" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,0.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
           <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-bottom:14px" data-fr="Grand portefeuille" data-en="Large portfolio">Grand portefeuille</div>
           <div style="font-size:22px;font-weight:800;letter-spacing:-0.6px;color:var(--navy);margin-bottom:10px" data-fr="26 à 75 portes" data-en="26 to 75 units">26 à 75 portes</div>
-          <p style="font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px" data-fr="Vous gérez plusieurs immeubles avec une équipe. Kevly centralise tout — plusieurs utilisateurs, accès comptable, Airbnb et gestion multi-propriétés." data-en="You manage multiple properties with a team. Kevly centralizes everything — multiple users, accountant access, Airbnb and multi-property management.">Vous gérez plusieurs immeubles avec une équipe. Kevly centralise tout — plusieurs utilisateurs, accès comptable, Airbnb et gestion multi-propriétés.</p>
+          <p style="font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px" data-fr="Vous gérez plusieurs immeubles avec une équipe. Kevly centralise tout — plusieurs utilisateurs, accès comptable, court terme et gestion multi-propriétés." data-en="You manage multiple properties with a team. Kevly centralizes everything — multiple users, accountant access, short-term rentals and multi-property management.">Vous gérez plusieurs immeubles avec une équipe. Kevly centralise tout — plusieurs utilisateurs, accès comptable, court terme et gestion multi-propriétés.</p>
           <div style="display:flex;flex-direction:column;gap:8px">
             <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Utilisateurs illimités" data-en="Unlimited users">Utilisateurs illimités</span></div>
-            <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Airbnb + longue durée" data-en="Airbnb + long-term">Airbnb + longue durée</span></div>
+            <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Court terme + longue durée" data-en="Short-term + long-term">Court terme + longue durée</span></div>
             <div style="display:flex;gap:8px;font-size:13px;color:var(--sub)"><span style="color:var(--green);font-weight:800">✓</span><span data-fr="Support prioritaire" data-en="Priority support">Support prioritaire</span></div>
           </div>
         </div>
@@ -652,7 +652,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <button class="prod-tab-btn" onclick="goTab('loyers',this)" data-fr="Loyers" data-en="Rent">Loyers</button>
       <button class="prod-tab-btn" onclick="goTab('hypoth',this)" data-fr="Hypothèques" data-en="Mortgages">Hypothèques</button>
       <button class="prod-tab-btn" onclick="goTab('rapports',this)" data-fr="Rapports" data-en="Reports">Rapports</button>
-      <button class="prod-tab-btn" onclick="goTab('airbnb',this)" data-fr="Airbnb" data-en="Airbnb">Airbnb</button>
+      <button class="prod-tab-btn" onclick="goTab('ct',this)" data-fr="Court terme" data-en="Short-term">Court terme</button>
       <button class="prod-tab-btn" onclick="goTab('maint',this)" data-fr="Maintenance" data-en="Maintenance">Maintenance</button>
       <button class="prod-tab-btn" onclick="goTab('notifs',this)" data-fr="Notifications" data-en="Notifications">Notifications</button>
       <button class="prod-tab-btn" onclick="goTab('comms',this)" data-fr="Communications" data-en="Communications">Communications</button>
@@ -772,15 +772,15 @@ footer{background:#070D1A;padding:64px 6% 36px}
       </div>
     </div>
 
-    <div class="prod-pane" id="pt-airbnb">
+    <div class="prod-pane" id="pt-ct">
       <div class="pp-left">
-        <h3 data-fr="Airbnb / Court terme" data-en="Airbnb / Short-term">Airbnb / Court terme</h3>
+        <h3 data-fr="Court terme" data-en="Short-term">Court terme</h3>
         <p data-fr="Gérez vos locations courte durée dans le même outil que vos locations longue durée. TPS/TVQ automatique, mode mixte et suivi des réservations par logement." data-en="Manage your short-term rentals in the same tool as your long-term rentals. Automatic GST/QST, mixed mode and booking tracking by unit.">Gérez vos locations courte durée dans le même outil que vos locations longue durée. TPS/TVQ automatique, mode mixte et suivi par logement.</p>
         <div class="pp-pts">
           <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Réservations et revenus par annonce" data-en="Bookings and revenue per listing">Réservations et revenus par annonce</span></div>
           <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="TPS/TVQ calculée automatiquement (seuil 30 000 $)" data-en="GST/QST auto-calculated ($30,000 threshold)">TPS/TVQ calculée automatiquement (seuil 30 000 $)</span></div>
-          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Mode mixte — même logement en Airbnb et longue durée" data-en="Mixed mode — same unit for Airbnb and long-term">Mode mixte — même logement en Airbnb et longue durée</span></div>
-          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Comparaison revenus Airbnb vs longue durée" data-en="Airbnb vs long-term revenue comparison">Comparaison revenus Airbnb vs longue durée</span></div>
+          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Mode mixte — même logement en court et longue durée" data-en="Mixed mode — same unit for short and long-term rentals">Mode mixte — même logement en court et longue durée</span></div>
+          <div class="pp-pt"><span class="pp-chk">✓</span><span data-fr="Comparaison revenus court terme vs longue durée" data-en="Short-term vs long-term revenue comparison">Comparaison revenus court terme vs longue durée</span></div>
         </div>
       </div>
       <div class="pp-right">
@@ -955,7 +955,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <div class="pf"><span class="pfy">✓</span><span data-fr="Hypothèques complètes" data-en="Full mortgages">Hypothèques complètes</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Rapports & projections" data-en="Reports & projections">Rapports & projections</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="2 utilisateurs" data-en="2 users">2 utilisateurs</span></div>
-          <div class="pf"><span class="pfn">✗</span><span data-fr="Court terme / Airbnb" data-en="Short-term / Airbnb">Court terme / Airbnb</span></div>
+          <div class="pf"><span class="pfn">✗</span><span data-fr="Court terme" data-en="Short-term">Court terme</span></div>
         </div>
         <button class="plan-btn plan-btn-dark" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
@@ -965,7 +965,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <div class="plan-limit" data-fr="26 à 40 portes · Québec" data-en="26 to 40 units · Quebec">26 à 40 portes · Québec</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Tout du Propriétaire" data-en="Everything in Landlord">Tout du Propriétaire</span></div>
-          <div class="pf"><span class="pfy">✓</span><span data-fr="Court terme / Airbnb" data-en="Short-term / Airbnb">Court terme / Airbnb</span></div>
+          <div class="pf"><span class="pfy">✓</span><span data-fr="Court terme" data-en="Short-term">Court terme</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Rapport fiscal comptable" data-en="Accountant tax report">Rapport fiscal comptable</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="Projections avancées" data-en="Advanced projections">Projections avancées</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="5 utilisateurs" data-en="5 users">5 utilisateurs</span></div>
