@@ -1150,6 +1150,9 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <span data-fr="Pas encore de compte ?" data-en="No account yet?">Pas encore de compte ?</span>
         <button onclick="goPage('inscription')" data-fr="Commencer gratuitement →" data-en="Start free →">Commencer gratuitement →</button>
       </p>
+      <p class="auth-switch" style="margin-top:6px">
+        <button onclick="goPage('reset-mdp')" style="color:var(--dim);font-size:12px" data-fr="Mot de passe oublié ?" data-en="Forgot password?">Mot de passe oublié ?</button>
+      </p>
     </div>
   </div>
 </div><!-- /page-connexion -->
@@ -1194,6 +1197,74 @@ footer{background:#070D1A;padding:64px 6% 36px}
     </div>
   </div>
 </div><!-- /page-inscription -->
+
+<!-- ══════════════════════════════
+     PAGE RESET MDP
+══════════════════════════════ -->
+<div class="page" id="page-reset-mdp">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="nav-logo-mark" style="color:var(--navy)">
+          <svg width="34" height="27" viewBox="0 0 100 78" fill="none">
+            <path d="M4,74 L32,14 L57,74 Z" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M36,74 L63,4 L98,74 Z" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="auth-logo-txt">KEVLY</span>
+      </div>
+      <h1 class="auth-h" data-fr="Mot de passe oublié" data-en="Forgot password">Mot de passe oublié</h1>
+      <p class="auth-sub" data-fr="Entrez votre courriel pour recevoir un lien de réinitialisation." data-en="Enter your email to receive a reset link.">Entrez votre courriel pour recevoir un lien de réinitialisation.</p>
+      <form onsubmit="submitResetMdp(event)">
+        <div class="auth-field">
+          <label class="auth-lbl" data-fr="Courriel" data-en="Email">Courriel</label>
+          <input class="auth-input" type="email" id="reset-email" placeholder="votre@courriel.com" required autocomplete="email"/>
+        </div>
+        <p class="auth-error" id="reset-error"></p>
+        <button type="submit" id="reset-btn" class="auth-submit" data-fr="Envoyer le lien →" data-en="Send reset link →">Envoyer le lien →</button>
+      </form>
+      <div class="auth-confirm" id="reset-confirm" style="display:none">
+        <span data-fr="✓ Vérifiez votre courriel pour le lien de réinitialisation." data-en="✓ Check your email for the reset link.">✓ Vérifiez votre courriel pour le lien de réinitialisation.</span>
+      </div>
+      <p class="auth-switch" style="margin-top:12px">
+        <button onclick="goPage('connexion')" data-fr="← Retour à la connexion" data-en="← Back to login">← Retour à la connexion</button>
+      </p>
+    </div>
+  </div>
+</div><!-- /page-reset-mdp -->
+
+<!-- ══════════════════════════════
+     PAGE NOUVEAU MDP
+══════════════════════════════ -->
+<div class="page" id="page-nouveau-mdp">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="nav-logo-mark" style="color:var(--navy)">
+          <svg width="34" height="27" viewBox="0 0 100 78" fill="none">
+            <path d="M4,74 L32,14 L57,74 Z" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M36,74 L63,4 L98,74 Z" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="auth-logo-txt">KEVLY</span>
+      </div>
+      <h1 class="auth-h" data-fr="Nouveau mot de passe" data-en="New password">Nouveau mot de passe</h1>
+      <p class="auth-sub" data-fr="Choisissez un nouveau mot de passe pour votre compte." data-en="Choose a new password for your account.">Choisissez un nouveau mot de passe pour votre compte.</p>
+      <form onsubmit="submitNouveauMdp(event)">
+        <div class="auth-field">
+          <label class="auth-lbl" data-fr="Nouveau mot de passe" data-en="New password">Nouveau mot de passe</label>
+          <input class="auth-input" type="password" id="newpw-pw" placeholder="••••••••" required autocomplete="new-password" minlength="8"/>
+        </div>
+        <div class="auth-field">
+          <label class="auth-lbl" data-fr="Confirmer le mot de passe" data-en="Confirm password">Confirmer le mot de passe</label>
+          <input class="auth-input" type="password" id="newpw-pw2" placeholder="••••••••" required autocomplete="new-password" minlength="8"/>
+        </div>
+        <p class="auth-error" id="newpw-error"></p>
+        <button type="submit" id="newpw-btn" class="auth-submit" data-fr="Mettre à jour →" data-en="Update password →">Mettre à jour →</button>
+      </form>
+    </div>
+  </div>
+</div><!-- /page-nouveau-mdp -->
 
 
 <!-- ══════════════════════════════
@@ -1314,6 +1385,11 @@ const _sb = supabase.createClient(
   'sb_publishable_xFLoFW0Y5XduFv7lD-wULQ_yDHlb1_1'
 );
 
+// Detect PASSWORD_RECOVERY redirect from Supabase email link
+_sb.auth.onAuthStateChange((event) => {
+  if (event === 'PASSWORD_RECOVERY') setTimeout(() => goPage('nouveau-mdp'), 50);
+});
+
 function _sbRedirect(session) {
   const { access_token, refresh_token, expires_in } = session;
   window.location.href =
@@ -1352,7 +1428,10 @@ async function submitInscription(e) {
   const conf  = document.getElementById('reg-confirm');
   btn.disabled = true; btn.textContent = '…'; err.textContent = '';
 
-  const { data, error } = await _sb.auth.signUp({ email, password: pw });
+  const { data, error } = await _sb.auth.signUp({
+    email, password: pw,
+    options: { emailRedirectTo: 'https://kevly.ca' }
+  });
   if (error) {
     btn.disabled = false;
     btn.textContent = lang === 'fr' ? 'Commencer gratuitement →' : 'Start for free →';
@@ -1367,6 +1446,50 @@ async function submitInscription(e) {
     btn.textContent = lang === 'fr' ? '✓ Courriel envoyé !' : '✓ Email sent!';
     conf.style.display = 'block';
   }
+}
+
+async function submitResetMdp(e) {
+  e.preventDefault();
+  const email = document.getElementById('reset-email').value.trim();
+  const btn   = document.getElementById('reset-btn');
+  const err   = document.getElementById('reset-error');
+  const conf  = document.getElementById('reset-confirm');
+  btn.disabled = true; btn.textContent = '…'; err.textContent = '';
+
+  const { error } = await _sb.auth.resetPasswordForEmail(email, {
+    redirectTo: 'https://kevly.ca'
+  });
+  if (error) {
+    btn.disabled = false;
+    btn.textContent = lang === 'fr' ? 'Envoyer le lien →' : 'Send reset link →';
+    err.textContent = error.message;
+    return;
+  }
+  btn.textContent = lang === 'fr' ? '✓ Lien envoyé !' : '✓ Link sent!';
+  conf.style.display = 'block';
+}
+
+async function submitNouveauMdp(e) {
+  e.preventDefault();
+  const pw  = document.getElementById('newpw-pw').value;
+  const pw2 = document.getElementById('newpw-pw2').value;
+  const btn = document.getElementById('newpw-btn');
+  const err = document.getElementById('newpw-error');
+  if (pw !== pw2) {
+    err.textContent = lang === 'fr' ? 'Les mots de passe ne correspondent pas.' : 'Passwords do not match.';
+    return;
+  }
+  btn.disabled = true; btn.textContent = '…'; err.textContent = '';
+  const { error } = await _sb.auth.updateUser({ password: pw });
+  if (error) {
+    btn.disabled = false;
+    btn.textContent = lang === 'fr' ? 'Mettre à jour →' : 'Update password →';
+    err.textContent = error.message;
+    return;
+  }
+  const { data: sd } = await _sb.auth.getSession();
+  if (sd.session) _sbRedirect(sd.session);
+  else window.location.href = 'https://app.kevly.ca';
 }
 
 // ── TABS PRODUIT ──
