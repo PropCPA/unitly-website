@@ -940,7 +940,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="prix-sub-txt" data-fr="Commencez gratuitement. Évoluez selon vos besoins." data-en="Start free. Scale as you grow.">Commencez gratuitement. Évoluez selon vos besoins.</div>
       <div class="toggle-wrap">
         <button class="tog-btn active" id="tog-m" onclick="setTog('m')" data-fr="Mensuel" data-en="Monthly">Mensuel</button>
-        <button class="tog-btn" id="tog-a" onclick="setTog('a')" data-fr="Annuel — 2 mois gratuits" data-en="Annual — 2 months free">Annuel — 2 mois gratuits</button>
+        <button class="tog-btn" id="tog-a" onclick="setTog('a')" data-fr="Annuel — 1 mois gratuit" data-en="Annual — 1 month free">Annuel — 1 mois gratuit</button>
       </div>
     </div>
   </div>
@@ -1029,7 +1029,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
         </div>
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)"><span data-fr="Le rabais annuel s'applique-t-il dès maintenant ?" data-en="Does the annual discount apply right away?">Le rabais annuel s'applique-t-il dès maintenant ?</span><span class="faq-q-icon">+</span></div>
-          <div class="faq-a"><div class="faq-a-inner" data-fr="Oui — en choisissant le plan annuel, vous économisez l'équivalent de 2 mois. Le paiement est effectué une fois par année." data-en="Yes — by choosing the annual plan, you save the equivalent of 2 months. Payment is made once per year.">Oui — en choisissant le plan annuel, vous économisez l'équivalent de 2 mois. Le paiement est effectué une fois par année.</div></div>
+          <div class="faq-a"><div class="faq-a-inner" data-fr="Oui — en choisissant le plan annuel, vous économisez l'équivalent d'1 mois. Le paiement est effectué une fois par année." data-en="Yes — by choosing the annual plan, you save the equivalent of 1 month. Payment is made once per year.">Oui — en choisissant le plan annuel, vous économisez l'équivalent d'1 mois. Le paiement est effectué une fois par année.</div></div>
         </div>
       </div>
     </div>
@@ -1381,7 +1381,7 @@ function goTab(id, btn) {
 let pricingMode = 'm';
 const PRICES = {
   m: {p0:'14 $', p1:'29 $', p2:'39 $', p3:'59 $'},
-  a: {p0:'12 $', p1:'24 $', p2:'32 $', p3:'49 $'}
+  a: {p0:'13 $', p1:'27 $', p2:'36 $', p3:'54 $'}
 };
 function setTog(mode) {
   pricingMode = mode;
