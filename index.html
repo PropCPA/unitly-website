@@ -1571,6 +1571,12 @@ document.getElementById('page-accueil').style.opacity = '1';
 document.getElementById('page-accueil').style.transform = 'translateY(0)';
 setupRevealClasses();
 initReveals();
+
+// Handle redirects from app.kevly.ca (e.g. /#connexion, /#inscription)
+(function() {
+  const h = location.hash.replace(/^#/, '');
+  if (['connexion','inscription','reset-mdp'].includes(h)) goPage(h);
+})();
 </script>
 
 <!-- Cookie Banner -->
