@@ -4,20 +4,20 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>KEVLY — La clé de votre gestion locative</title>
-<meta name="description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. Calculateur TAL 2026, hypothèques, app mobile. Essai gratuit 30 jours, aucune carte requise."/>
+<meta name="description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. Hypothèques, app mobile, rapports fiscaux. Essai gratuit 30 jours, aucune carte requise."/>
 <meta name="robots" content="index, follow"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://kevly.ca"/>
 <meta property="og:site_name" content="Kevly"/>
 <meta property="og:locale" content="fr_CA"/>
 <meta property="og:title" content="KEVLY — La clé de votre gestion locative"/>
-<meta property="og:description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. Calculateur TAL 2026, hypothèques, app mobile — tout en un, sans frais cachés."/>
+<meta property="og:description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. Hypothèques, app mobile, rapports fiscaux — tout en un, sans frais cachés."/>
 <meta property="og:image" content="https://kevly.ca/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="KEVLY — La clé de votre gestion locative"/>
-<meta name="twitter:description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. Calculateur TAL 2026, hypothèques, app mobile."/>
+<meta name="twitter:description" content="La plateforme de gestion locative conçue pour les propriétaires canadiens. Hypothèques, app mobile, rapports fiscaux."/>
 <meta name="twitter:image" content="https://kevly.ca/og-image.png"/>
 <link rel="canonical" href="https://kevly.ca"/>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230F1729'/%3E%3Cpath d='M8 88 L33 24 L58 88 Z' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M36 88 L62 10 L94 88 Z' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"/>
@@ -350,6 +350,23 @@ footer{background:#070D1A;padding:64px 6% 36px}
 .am-at{font-size:10px;font-weight:600;color:#111}
 .am-as{font-size:9px;color:#888;margin-top:1px}
 
+/* ══ AUTH PAGES ══ */
+.auth-wrap{min-height:calc(100vh - 64px);display:flex;align-items:center;justify-content:center;padding:48px 6%;background:linear-gradient(180deg,var(--surface) 0%,#fff 100%)}
+.auth-card{background:#fff;border:1px solid var(--border);border-radius:var(--rxl);padding:48px 44px;max-width:440px;width:100%;box-shadow:0 8px 40px rgba(0,0,0,0.07)}
+.auth-logo{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:36px}
+.auth-logo-txt{font-size:17px;font-weight:800;color:var(--navy);letter-spacing:0.06em}
+.auth-h{font-size:24px;font-weight:800;letter-spacing:-0.6px;color:var(--navy);text-align:center;margin-bottom:6px}
+.auth-sub{font-size:14px;color:var(--sub);text-align:center;margin-bottom:28px;line-height:1.6}
+.auth-field{margin-top:16px}
+.auth-lbl{display:block;font-size:11px;font-weight:700;color:var(--sub);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:7px}
+.auth-input{width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;color:var(--text);background:#fff;transition:border-color 0.2s,box-shadow 0.2s;outline:none;box-sizing:border-box}
+.auth-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,91,219,0.1)}
+.auth-submit{width:100%;padding:15px;background:var(--navy);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;margin-top:24px;transition:all 0.2s;letter-spacing:-0.2px}
+.auth-submit:hover{background:#1a2540;transform:translateY(-1px);box-shadow:0 6px 20px rgba(15,23,41,0.2)}
+.auth-switch{text-align:center;font-size:13px;color:var(--sub);margin-top:18px}
+.auth-switch button{color:var(--blue);font-weight:700;background:none;border:none;cursor:pointer;font-family:inherit;font-size:13px;padding:0}
+.auth-badge{background:var(--green-light);border:1px solid rgba(12,166,120,0.15);border-radius:10px;padding:11px 14px;margin-bottom:24px;font-size:13px;color:#0a6b52;font-weight:600;text-align:center}
+
 </style>
 </head>
 <body>
@@ -381,8 +398,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
     </div>
     <div class="nav-right">
       <button class="lang-btn" id="lang-btn" onclick="toggleLang()">EN</button>
-      <a href="https://app.kevly.ca" class="btn btn-ghost" data-fr="Connexion" data-en="Login">Connexion</a>
-      <a href="https://app.kevly.ca/register" class="btn btn-dark" data-fr="Commencer" data-en="Get started">Commencer</a>
+      <button class="btn btn-ghost" onclick="goPage('connexion')" data-fr="Connexion" data-en="Login">Connexion</button>
+      <button class="btn btn-dark" onclick="goPage('inscription')" data-fr="Commencer" data-en="Get started">Commencer</button>
     </div>
   </div>
 </nav>
@@ -392,8 +409,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
   <button class="mobile-link" onclick="goPage('tarifs');closeMobileMenu()" data-fr="Tarifs" data-en="Pricing">Tarifs</button>
   <button class="mobile-link" onclick="goPage('contact');closeMobileMenu()" data-fr="Contact" data-en="Contact">Contact</button>
   <div class="mobile-menu-sep"></div>
-  <a href="https://app.kevly.ca" class="mobile-link" data-fr="Connexion" data-en="Login">Connexion</a>
-  <a href="https://app.kevly.ca/register" class="mobile-link" style="color:var(--blue);font-weight:700" data-fr="Commencer gratuitement →" data-en="Get started free →">Commencer gratuitement →</a>
+  <button class="mobile-link" onclick="goPage('connexion');closeMobileMenu()" data-fr="Connexion" data-en="Login">Connexion</button>
+  <button class="mobile-link" style="color:var(--blue);font-weight:700" onclick="goPage('inscription');closeMobileMenu()" data-fr="Commencer gratuitement →" data-en="Get started free →">Commencer gratuitement →</button>
 </div>
 
 <!-- ══════════════════════════════
@@ -410,7 +427,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <h1 data-fr="La clé de votre gestion locative.<br><em>Simple. Transparent. Canadien.</em>" data-en="The key to your property management.<br><em>Simple. Transparent. Made for Canada.</em>">La clé de votre gestion locative.<br><em>Simple. Transparent. Canadien.</em></h1>
       <p class="hero-sub" data-fr="La plateforme de gestion locative conçue pour les propriétaires canadiens. Calculateur TAL 2026, loyers, maintenance, hypothèques — tout en un, sans frais cachés." data-en="The property management platform built for Canadian landlords. TAL calculator 2026, rent, maintenance, mortgages — all in one, no hidden fees.">La plateforme de gestion locative conçue pour les propriétaires canadiens. Calculateur TAL 2026, loyers, maintenance, hypothèques — tout en un, sans frais cachés.</p>
       <div class="hero-cta">
-        <a href="https://app.kevly.ca/register" class="btn btn-dark btn-xl" data-fr="Commencer gratuitement →" data-en="Start for free →">Commencer gratuitement →</a>
+        <button class="btn btn-dark btn-xl" onclick="goPage('inscription')" data-fr="Commencer gratuitement →" data-en="Start for free →">Commencer gratuitement →</button>
         <button class="btn btn-ghost btn-lg" onclick="goPage('produit')" data-fr="Voir le produit" data-en="See the product">Voir le produit</button>
       </div>
       <p class="hero-note">
@@ -432,7 +449,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="trust-sep"></div>
       <div class="trust-item" data-fr="Conforme Loi 25 & PIPEDA" data-en="Law 25 & PIPEDA compliant">Conforme Loi 25 & PIPEDA</div>
       <div class="trust-sep"></div>
-      <div class="trust-item" data-fr="Calculateur TAL inclus" data-en="TAL calculator included">Calculateur TAL inclus</div>
+      <div class="trust-item" data-fr="App mobile incluse" data-en="Mobile app included">App mobile incluse</div>
       <div class="trust-sep"></div>
       <div class="trust-item" data-fr="Propriétaires canadiens" data-en="Canadian landlords">Propriétaires canadiens</div>
       <div class="trust-sep"></div>
@@ -482,7 +499,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
             <div style="display:flex;gap:8px;font-size:14px;color:var(--sub)"><span style="color:var(--green);font-weight:700">✓</span><span data-fr="Loyers — Marquez payé en un tap" data-en="Rent — Mark paid in one tap">Loyers — Marquez payé en un tap</span></div>
             <div style="display:flex;gap:8px;font-size:14px;color:var(--sub)"><span style="color:var(--green);font-weight:700">✓</span><span data-fr="Locataires — Fiche + appel direct" data-en="Tenants — Profile + direct call">Locataires — Fiche + appel direct</span></div>
             <div style="display:flex;gap:8px;font-size:14px;color:var(--sub)"><span style="color:var(--green);font-weight:700">✓</span><span data-fr="Maintenance — Créez un ticket sur le terrain" data-en="Maintenance — Create a ticket on the go">Maintenance — Créez un ticket sur le terrain</span></div>
-            <div style="display:flex;gap:8px;font-size:14px;color:var(--sub)"><span style="color:var(--green);font-weight:700">✓</span><span data-fr="Communications — 14 modèles pré-remplis" data-en="Communications — 14 pre-filled templates">Communications — 14 modèles pré-remplis</span></div>
+            <div style="display:flex;gap:8px;font-size:14px;color:var(--sub)"><span style="color:var(--green);font-weight:700">✓</span><span data-fr="Notifications — Alertes loyers, baux et renouvellements" data-en="Notifications — Rent, lease and renewal alerts">Notifications — Alertes loyers, baux et renouvellements</span></div>
           </div>
           <p style="font-size:13px;color:var(--dim)" data-fr="Inclus avec tous les plans — même abonnement, même compte." data-en="Included with all plans — same subscription, same account.">Inclus avec tous les plans — même abonnement, même compte.</p>
         </div>
@@ -546,7 +563,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <h2 style="color:#fff" data-fr="Des chiffres qui parlent" data-en="Numbers that speak for themselves">Des chiffres qui parlent</h2>
       <div class="stats-grid">
         <div><div class="stat-num">19<em>+</em></div><div class="stat-lbl" data-fr="Modules intégrés" data-en="Integrated modules">Modules intégrés</div></div>
-        <div><div class="stat-num">30<em>s</em></div><div class="stat-lbl" data-fr="Pour calculer une hausse TAL" data-en="To calculate a TAL increase">Pour calculer une hausse TAL</div></div>
+        <div><div class="stat-num">30<em>j</em></div><div class="stat-lbl" data-fr="Jours d'essai gratuit" data-en="Days free trial">Jours d'essai gratuit</div></div>
         <div><div class="stat-num">14</div><div class="stat-lbl" data-fr="Modèles de communication inclus" data-en="Communication templates included">Modèles de communication inclus</div></div>
         <div><div class="stat-num">100<em>%</em></div><div class="stat-lbl" data-fr="Données au Canada" data-en="Data in Canada">Données au Canada</div></div>
       </div>
@@ -626,7 +643,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="container">
       <h2 data-fr="Prêt à simplifier votre gestion ?" data-en="Ready to simplify your management?">Prêt à simplifier votre gestion ?</h2>
       <p data-fr="Rejoignez les premiers propriétaires canadiens sur Kevly — prix fondateurs disponibles maintenant." data-en="Join the first Canadian landlords on Kevly — founder pricing available now.">Rejoignez les premiers propriétaires canadiens sur Kevly — prix fondateurs disponibles maintenant.</p>
-      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.kevly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
+      <div class="cta-btn-wrap"><button class="btn-white" onclick="goPage('inscription')" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
       <p class="cta-note"><span data-fr="Aucune carte requise" data-en="No card required">Aucune carte requise</span><span>·</span><span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span><span>·</span><span data-fr="Support bilingue" data-en="Bilingual support">Support bilingue</span></p>
     </div>
   </section>
@@ -899,7 +916,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="container">
       <h2 data-fr="Prêt à essayer ?" data-en="Ready to try?">Prêt à essayer ?</h2>
       <p data-fr="Rejoignez des propriétaires canadiens qui gèrent leur portefeuille avec Kevly." data-en="Join Canadian landlords managing their portfolio with Kevly.">Rejoignez des propriétaires canadiens qui gèrent leur portefeuille avec Kevly.</p>
-      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.kevly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
+      <div class="cta-btn-wrap"><button class="btn-white" onclick="goPage('inscription')" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
       <p class="cta-note"><span data-fr="Aucune carte requise" data-en="No card required">Aucune carte requise</span><span>·</span><span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span></p>
     </div>
   </section>
@@ -939,7 +956,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <div class="pf"><span class="pfn">✗</span><span data-fr="Communications locataires" data-en="Tenant communications">Communications locataires</span></div>
           <div class="pf"><span class="pfn">✗</span><span data-fr="Hypothèques" data-en="Mortgages">Hypothèques</span></div>
         </div>
-        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
+        <button class="plan-btn plan-btn-light" onclick="goPage('inscription')" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
       <div class="plan-card pop">
         <div class="pop-badge" data-fr="Le plus populaire" data-en="Most popular">Le plus populaire</div>
@@ -954,7 +971,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <div class="pf"><span class="pfy">✓</span><span data-fr="2 utilisateurs" data-en="2 users">2 utilisateurs</span></div>
           <div class="pf"><span class="pfn">✗</span><span data-fr="Court terme" data-en="Short-term">Court terme</span></div>
         </div>
-        <button class="plan-btn plan-btn-dark" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
+        <button class="plan-btn plan-btn-dark" onclick="goPage('inscription')" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
       <div class="plan-card">
         <div class="plan-tier" data-fr="Investisseur" data-en="Investor">Investisseur</div>
@@ -968,7 +985,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <div class="pf"><span class="pfy">✓</span><span data-fr="5 utilisateurs" data-en="5 users">5 utilisateurs</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="1 accès comptable inclus" data-en="1 accountant access included">1 accès comptable inclus</span></div>
         </div>
-        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
+        <button class="plan-btn plan-btn-light" onclick="goPage('inscription')" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
       <div class="plan-card">
         <div class="plan-tier" data-fr="Portefeuille" data-en="Portfolio">Portefeuille</div>
@@ -982,7 +999,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
           <div class="pf"><span class="pfy">✓</span><span data-fr="Support prioritaire" data-en="Priority support">Support prioritaire</span></div>
           <div class="pf"><span class="pfy">✓</span><span data-fr="SMS add-on disponible" data-en="SMS add-on available">SMS add-on disponible</span></div>
         </div>
-        <button class="plan-btn plan-btn-light" onclick="window.location='https://app.kevly.ca/register'" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
+        <button class="plan-btn plan-btn-light" onclick="goPage('inscription')" data-fr="Essai gratuit 30 jours" data-en="30-day free trial">Essai gratuit 30 jours</button>
       </div>
     </div>
     <div style="text-align:center;margin-top:28px;padding:20px;background:var(--surface);border-radius:12px;border:1px solid var(--border)">
@@ -1019,7 +1036,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
     <div class="container" style="display:flex;flex-direction:column;align-items:center">
       <h2 data-fr="Commencez gratuitement aujourd'hui" data-en="Start free today">Commencez gratuitement aujourd'hui</h2>
       <p data-fr="Tout ce dont vous avez besoin pour gérer votre portefeuille." data-en="Everything you need to manage your portfolio.">Tout ce dont vous avez besoin pour gérer votre portefeuille.</p>
-      <div class="cta-btn-wrap"><button class="btn-white" onclick="window.location='https://app.kevly.ca/register'" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
+      <div class="cta-btn-wrap"><button class="btn-white" onclick="goPage('inscription')" data-fr="Commencer gratuitement — 30 jours d'essai" data-en="Start free — 30-day trial">Commencer gratuitement — 30 jours d'essai</button></div>
       <p class="cta-note"><span data-fr="Aucune carte requise" data-en="No card required">Aucune carte requise</span><span>·</span><span data-fr="Annulez en tout temps" data-en="Cancel anytime">Annulez en tout temps</span><span>·</span><span data-fr="Support bilingue" data-en="Bilingual support">Support bilingue</span></p>
     </div>
   </section>
@@ -1098,6 +1115,80 @@ footer{background:#070D1A;padding:64px 6% 36px}
 
 
 <!-- ══════════════════════════════
+     PAGE CONNEXION
+══════════════════════════════ -->
+<div class="page" id="page-connexion">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="nav-logo-mark" style="color:var(--navy)">
+          <svg width="34" height="27" viewBox="0 0 100 78" fill="none">
+            <path d="M4,74 L32,14 L57,74 Z" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M36,74 L63,4 L98,74 Z" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="auth-logo-txt">KEVLY</span>
+      </div>
+      <h1 class="auth-h" data-fr="Connexion" data-en="Login">Connexion</h1>
+      <p class="auth-sub" data-fr="Accédez à votre tableau de bord de gestion locative." data-en="Access your property management dashboard.">Accédez à votre tableau de bord de gestion locative.</p>
+      <form onsubmit="submitConnexion(event)">
+        <div class="auth-field">
+          <label class="auth-lbl" data-fr="Courriel" data-en="Email">Courriel</label>
+          <input class="auth-input" type="email" id="login-email" placeholder="votre@courriel.com" required autocomplete="email"/>
+        </div>
+        <div class="auth-field">
+          <label class="auth-lbl" data-fr="Mot de passe" data-en="Password">Mot de passe</label>
+          <input class="auth-input" type="password" id="login-pw" placeholder="••••••••" required autocomplete="current-password"/>
+        </div>
+        <button type="submit" class="auth-submit" data-fr="Se connecter →" data-en="Log in →">Se connecter →</button>
+      </form>
+      <p class="auth-switch">
+        <span data-fr="Pas encore de compte ?" data-en="No account yet?">Pas encore de compte ?</span>
+        <button onclick="goPage('inscription')" data-fr="Commencer gratuitement →" data-en="Start free →">Commencer gratuitement →</button>
+      </p>
+    </div>
+  </div>
+</div><!-- /page-connexion -->
+
+<!-- ══════════════════════════════
+     PAGE INSCRIPTION
+══════════════════════════════ -->
+<div class="page" id="page-inscription">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="nav-logo-mark" style="color:var(--navy)">
+          <svg width="34" height="27" viewBox="0 0 100 78" fill="none">
+            <path d="M4,74 L32,14 L57,74 Z" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M36,74 L63,4 L98,74 Z" stroke="currentColor" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="auth-logo-txt">KEVLY</span>
+      </div>
+      <div class="auth-badge" data-fr="✓ 30 jours gratuits — aucune carte requise" data-en="✓ 30 days free — no card required">✓ 30 jours gratuits — aucune carte requise</div>
+      <h1 class="auth-h" data-fr="Créer un compte" data-en="Create an account">Créer un compte</h1>
+      <p class="auth-sub" data-fr="Gérez vos immeubles avec Kevly. Prêt en 5 minutes." data-en="Manage your properties with Kevly. Ready in 5 minutes.">Gérez vos immeubles avec Kevly. Prêt en 5 minutes.</p>
+      <form onsubmit="submitInscription(event)">
+        <div class="auth-field">
+          <label class="auth-lbl" data-fr="Courriel" data-en="Email">Courriel</label>
+          <input class="auth-input" type="email" id="reg-email" placeholder="votre@courriel.com" required autocomplete="email"/>
+        </div>
+        <div class="auth-field">
+          <label class="auth-lbl" data-fr="Mot de passe" data-en="Password">Mot de passe</label>
+          <input class="auth-input" type="password" id="reg-pw" placeholder="••••••••" required autocomplete="new-password" minlength="8"/>
+        </div>
+        <button type="submit" class="auth-submit" data-fr="Commencer gratuitement →" data-en="Start for free →">Commencer gratuitement →</button>
+      </form>
+      <p class="auth-switch">
+        <span data-fr="Déjà un compte ?" data-en="Already have an account?">Déjà un compte ?</span>
+        <button onclick="goPage('connexion')" data-fr="Se connecter" data-en="Log in">Se connecter</button>
+      </p>
+    </div>
+  </div>
+</div><!-- /page-inscription -->
+
+
+<!-- ══════════════════════════════
      FOOTER
 ══════════════════════════════ -->
 <footer>
@@ -1119,8 +1210,8 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <h4 data-fr="Produit" data-en="Product">Produit</h4>
         <a href="#" onclick="goPage('produit');return false" data-fr="Fonctionnalités" data-en="Features">Fonctionnalités</a>
         <a href="#" onclick="goPage('tarifs');return false" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
-        <a href="https://app.kevly.ca" data-fr="Se connecter" data-en="Login">Se connecter</a>
-        <a href="https://app.kevly.ca/register" data-fr="Essai gratuit" data-en="Free trial">Essai gratuit</a>
+        <a href="#" onclick="goPage('connexion');return false" data-fr="Se connecter" data-en="Login">Se connecter</a>
+        <a href="#" onclick="goPage('inscription');return false" data-fr="Essai gratuit" data-en="Free trial">Essai gratuit</a>
       </div>
       <div class="footer-col">
         <h4 data-fr="Légal" data-en="Legal">Légal</h4>
@@ -1207,6 +1298,18 @@ function goPage(id) {
   document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
   const nb = document.getElementById('nl-' + id);
   if (nb) nb.classList.add('active');
+}
+
+// ── AUTH ──
+function submitConnexion(e) {
+  e.preventDefault();
+  const email = document.getElementById('login-email').value.trim();
+  window.location.href = 'https://app.kevly.ca?email=' + encodeURIComponent(email);
+}
+function submitInscription(e) {
+  e.preventDefault();
+  const email = document.getElementById('reg-email').value.trim();
+  window.location.href = 'https://app.kevly.ca/register?email=' + encodeURIComponent(email);
 }
 
 // ── TABS PRODUIT ──
