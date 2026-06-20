@@ -250,6 +250,7 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .plan-btn-light{background:var(--surface);color:var(--navy)}
 .plan-btn-light:hover{background:var(--border)}
 .prix-note{text-align:center;font-size:13px;color:var(--dim);margin-top:20px;letter-spacing:-0.1px}
+.plan-annual-note{font-size:11px;color:var(--dim);margin-top:-12px;margin-bottom:8px;min-height:14px;letter-spacing:-0.1px}
 
 /* ══════════════════════════════
    FOOTER
@@ -950,6 +951,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="plan-card">
         <div class="plan-tier" data-fr="Démarrage" data-en="Starter">Démarrage</div>
         <div class="plan-price" id="prix-p0">14 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
+        <div class="plan-annual-note" id="annual-note-p0"></div>
         <div class="plan-limit" data-fr="Jusqu'à 10 portes" data-en="Up to 10 units">Jusqu'à 10 portes</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Locataires, baux & suivi des loyers" data-en="Tenants, leases & rent tracking">Locataires, baux & suivi des loyers</span></div>
@@ -965,6 +967,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <div class="pop-badge" data-fr="Le plus populaire" data-en="Most popular">Le plus populaire</div>
         <div class="plan-tier" data-fr="Propriétaire" data-en="Landlord">Propriétaire</div>
         <div class="plan-price" id="prix-p1">29 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
+        <div class="plan-annual-note" id="annual-note-p1"></div>
         <div class="plan-limit" data-fr="Jusqu'à 25 portes" data-en="Up to 25 units">Jusqu'à 25 portes</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Tout du Démarrage" data-en="Everything in Starter">Tout du Démarrage</span></div>
@@ -979,6 +982,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="plan-card">
         <div class="plan-tier" data-fr="Investisseur" data-en="Investor">Investisseur</div>
         <div class="plan-price" id="prix-p2">39 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
+        <div class="plan-annual-note" id="annual-note-p2"></div>
         <div class="plan-limit" data-fr="Jusqu'à 50 portes" data-en="Up to 50 units">Jusqu'à 50 portes</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Tout du Propriétaire" data-en="Everything in Landlord">Tout du Propriétaire</span></div>
@@ -993,6 +997,7 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="plan-card">
         <div class="plan-tier" data-fr="Portefeuille" data-en="Portfolio">Portefeuille</div>
         <div class="plan-price" id="prix-p3">59 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
+        <div class="plan-annual-note" id="annual-note-p3"></div>
         <div class="plan-limit" data-fr="Jusqu'à 75 portes" data-en="Up to 75 units">Jusqu'à 75 portes</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Tout de l'Investisseur" data-en="Everything in Investor">Tout de l'Investisseur</span></div>
@@ -1503,20 +1508,25 @@ function goTab(id, btn) {
 // ── TARIFS TOGGLE ──
 let pricingMode = 'm';
 const PRICES = {
-  m: {p0:'14 $', p1:'29 $', p2:'39 $', p3:'59 $'},
-  a: {p0:'154 $', p1:'319 $', p2:'429 $', p3:'649 $'}
+  m: {p0:'14 $',     p1:'29 $',     p2:'39 $',     p3:'59 $'},
+  a: {p0:'12,83 $',  p1:'26,58 $',  p2:'35,75 $',  p3:'54,08 $'}
+};
+const ANNUAL_NOTES = {
+  fr: {p0:'facturé 154 $/an', p1:'facturé 319 $/an', p2:'facturé 429 $/an', p3:'facturé 649 $/an'},
+  en: {p0:'billed $154/yr',   p1:'billed $319/yr',   p2:'billed $429/yr',   p3:'billed $649/yr'}
 };
 function setTog(mode) {
   pricingMode = mode;
   document.getElementById('tog-m').classList.toggle('active', mode === 'm');
   document.getElementById('tog-a').classList.toggle('active', mode === 'a');
   const p = PRICES[mode];
-  const suf = mode === 'a'
-    ? (lang === 'fr' ? '/an' : '/yr')
-    : (lang === 'fr' ? '/mois' : '/mo');
+  const suf = lang === 'fr' ? '/mois' : '/mo';
+  const notes = mode === 'a' ? ANNUAL_NOTES[lang] : null;
   ['p0','p1','p2','p3'].forEach(k => {
     const el = document.getElementById('prix-' + k);
+    const noteEl = document.getElementById('annual-note-' + k);
     if (el) el.innerHTML = p[k] + '<sub>' + suf + '</sub>';
+    if (noteEl) noteEl.textContent = notes ? notes[k] : '';
   });
 }
 
