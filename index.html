@@ -250,7 +250,7 @@ h2{font-size:clamp(30px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing
 .plan-btn-light{background:var(--surface);color:var(--navy)}
 .plan-btn-light:hover{background:var(--border)}
 .prix-note{text-align:center;font-size:13px;color:var(--dim);margin-top:20px;letter-spacing:-0.1px}
-.plan-annual-note{font-size:11px;color:var(--dim);margin-bottom:4px;letter-spacing:-0.1px}
+.plan-annual-note{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--green);background:var(--green-light);border-radius:20px;padding:3px 10px;margin-bottom:10px;letter-spacing:-0.1px}
 .plan-annual-note:empty{display:none}
 
 /* ══════════════════════════════
@@ -940,10 +940,6 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="section-tag" data-fr="Tarifs" data-en="Pricing">Tarifs</div>
       <div class="prix-h1" data-fr="Simple et transparent" data-en="Simple and transparent">Simple et transparent</div>
       <div class="prix-sub-txt" data-fr="Commencez gratuitement. Évoluez selon vos besoins." data-en="Start free. Scale as you grow.">Commencez gratuitement. Évoluez selon vos besoins.</div>
-      <div class="toggle-wrap">
-        <button class="tog-btn active" id="tog-m" onclick="setTog('m')" data-fr="Mensuel" data-en="Monthly">Mensuel</button>
-        <button class="tog-btn" id="tog-a" onclick="setTog('a')" data-fr="Annuel — 1 mois gratuit" data-en="Annual — 1 month free">Annuel — 1 mois gratuit</button>
-      </div>
     </div>
   </div>
 
@@ -952,7 +948,6 @@ footer{background:#070D1A;padding:64px 6% 36px}
       <div class="plan-card">
         <div class="plan-tier" data-fr="Démarrage" data-en="Starter">Démarrage</div>
         <div class="plan-price" id="prix-p0">14 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
-        <div class="plan-annual-note" id="annual-note-p0"></div>
         <div class="plan-limit" data-fr="Jusqu'à 10 portes" data-en="Up to 10 units">Jusqu'à 10 portes</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Locataires, baux & suivi des loyers" data-en="Tenants, leases & rent tracking">Locataires, baux & suivi des loyers</span></div>
@@ -968,7 +963,6 @@ footer{background:#070D1A;padding:64px 6% 36px}
         <div class="pop-badge" data-fr="Le plus populaire" data-en="Most popular">Le plus populaire</div>
         <div class="plan-tier" data-fr="Propriétaire" data-en="Landlord">Propriétaire</div>
         <div class="plan-price" id="prix-p1">29 $<sub data-fr="/mois" data-en="/mo">/mois</sub></div>
-        <div class="plan-annual-note" id="annual-note-p1"></div>
         <div class="plan-limit" data-fr="Jusqu'à 25 portes" data-en="Up to 25 units">Jusqu'à 25 portes</div>
         <div class="plan-feats">
           <div class="pf"><span class="pfy">✓</span><span data-fr="Tout du Démarrage" data-en="Everything in Starter">Tout du Démarrage</span></div>
@@ -1513,8 +1507,8 @@ const PRICES = {
   a: {p0:'13 $',     p1:'27 $',     p2:'36 $',     p3:'54 $'}
 };
 const ANNUAL_NOTES = {
-  fr: {p0:'facturé 154 $/an', p1:'facturé 319 $/an', p2:'facturé 429 $/an', p3:'facturé 649 $/an'},
-  en: {p0:'billed $154/yr',   p1:'billed $319/yr',   p2:'billed $429/yr',   p3:'billed $649/yr'}
+  fr: {p0:'✓ 154 $/an — 1 mois gratuit', p1:'✓ 319 $/an — 1 mois gratuit', p2:'✓ 429 $/an — 1 mois gratuit', p3:'✓ 649 $/an — 1 mois gratuit'},
+  en: {p0:'✓ $154/yr — 1 month free',    p1:'✓ $319/yr — 1 month free',    p2:'✓ $429/yr — 1 month free',    p3:'✓ $649/yr — 1 month free'}
 };
 function setTog(mode) {
   pricingMode = mode;
