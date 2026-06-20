@@ -1504,14 +1504,16 @@ function goTab(id, btn) {
 let pricingMode = 'm';
 const PRICES = {
   m: {p0:'14 $', p1:'29 $', p2:'39 $', p3:'59 $'},
-  a: {p0:'13 $', p1:'27 $', p2:'36 $', p3:'54 $'}
+  a: {p0:'154 $', p1:'319 $', p2:'429 $', p3:'649 $'}
 };
 function setTog(mode) {
   pricingMode = mode;
   document.getElementById('tog-m').classList.toggle('active', mode === 'm');
   document.getElementById('tog-a').classList.toggle('active', mode === 'a');
   const p = PRICES[mode];
-  const suf = lang === 'fr' ? '/mois' : '/mo';
+  const suf = mode === 'a'
+    ? (lang === 'fr' ? '/an' : '/yr')
+    : (lang === 'fr' ? '/mois' : '/mo');
   ['p0','p1','p2','p3'].forEach(k => {
     const el = document.getElementById('prix-' + k);
     if (el) el.innerHTML = p[k] + '<sub>' + suf + '</sub>';
